@@ -1,0 +1,1037 @@
+/* Список необходимых документов */
+.doc-list {}
+
+.doc-list__container {}
+
+.doc-list__title {}
+
+.doc-list__items {
+    display: flex;
+    gap: 30px;
+}
+
+.doc-list__item {
+    max-width: 590px;
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+}
+
+.doc-list__item-title {
+    color: #065BBA;
+}
+
+.doc-list__list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.doc-list__list-item {
+    display: inline-flex;
+    line-height: 0.7;
+    vertical-align: top;
+}
+
+.doc-list__list-item::before {
+    content: "•";
+    color: #000;
+    margin-right: 8px;
+}
+
+.doc-list__notify {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    border: 3px solid #CFEAF2;
+    border-radius: 6px;
+    padding: 11.4px 17px;
+}
+
+@media (max-width: 1201px) {}
+
+@media (max-width: 1025px) {
+    .doc-list__item {
+        gap: 35px;
+    }
+
+    .doc-list__list {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 830px) {}
+
+@media (max-width: 769px) {
+    .doc-list__items {
+        flex-direction: column;
+        gap: 42px;
+    }
+
+    .doc-list__item {
+        max-width: 600px;
+        gap: 30px;
+    }
+
+    .doc-list__list {
+        padding-right: 30px;
+    }
+
+    .doc-list__notify {
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 581px) {
+    .doc-list__title {
+        margin-bottom: 38px;
+    }
+
+    .doc-list__items {
+        gap: 38px;
+    }
+
+    .doc-list__item {
+        gap: 28px;
+    }
+
+    .doc-list__list {
+        gap: 15px;
+    }
+
+    .doc-list__notify {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 421px) {
+    .doc-list__title {
+        margin-bottom: 32px;
+    }
+
+    .doc-list__items {
+        gap: 32px;
+    }
+
+    .doc-list__item {
+        gap: 24px;
+    }
+
+    .doc-list__list {
+        gap: 8px;
+        padding-right: 40px;
+    }
+
+    .doc-list__notify {
+        margin-top: 8px;
+    }
+}
+
+
+/* Почему страхование оформляют у нас */
+.why-choose-us {}
+
+.why-choose-us__container {
+    padding-top: 78px;
+    padding-bottom: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-choose-us__title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.why-choose-us__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+    width: 100%;
+}
+
+.why-choose-us__items {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 70px 10px;
+}
+
+.why-choose-us__item {
+    flex: 1 0 calc(20% - 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px;
+}
+
+.why-choose-us__item-image-wrap {
+    max-width: 159px;
+}
+
+.why-choose-us__item-text {
+    color: #FFF;
+    max-width: 200px;
+}
+
+.why-choose-us__last-text {
+    font-weight: 700;
+    color: #FFF;
+    text-align: center;
+    max-width: 470px;
+}
+
+@media (max-width: 1201px) {
+    .why-choose-us__title {
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
+    .why-choose-us__content {
+        gap: 55px;
+    }
+
+    .why-choose-us__item {
+        flex: 1 0 calc(33.333% - 10px);
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .why-choose-us__container {
+        padding-top: 62px;
+        padding-bottom: 62px;
+    }
+
+    .why-choose-us__item {
+        max-width: 300px;
+    }
+
+    .why-choose-us__item-image-wrap {
+        max-width: 130px;
+    }
+}
+
+@media (max-width: 830px) {
+    .why-choose-us__container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .why-choose-us__title {
+        margin-bottom: 50px;
+    }
+
+    .why-choose-us__content {
+        gap: 50px;
+    }
+
+    .why-choose-us__item {
+        gap: 24px;
+    }
+
+    .why-choose-us__item-text {
+        max-width: 170px;
+    }
+}
+
+@media (max-width: 769px) {
+    .why-choose-us__title {
+        margin-bottom: 55px;
+    }
+
+    .why-choose-us__content {
+        gap: 55px;
+    }
+
+    .why-choose-us__item {
+        flex: 1 0 calc(50% - 10px);
+    }
+
+    .why-choose-us__items {
+        gap: 50px 10px;
+    }
+}
+
+@media (max-width: 581px) {
+    .why-choose-us__container {
+        padding-top: 41px;
+        padding-bottom: 41px;
+    }
+
+    .why-choose-us__title {
+        margin-bottom: 51px;
+    }
+
+    .why-choose-us__content {
+        gap: 51px;
+    }
+
+    .why-choose-us__items {
+        gap: 40px 10px;
+    }
+
+    .why-choose-us__item {
+        max-width: 230px;
+        gap: 20px;
+    }
+
+    .why-choose-us__item-image-wrap {
+        max-width: 95px;
+    }
+
+    .why-choose-us__last-text {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 421px) {
+    .why-choose-us__container {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .why-choose-us__title {
+        margin-bottom: 34px;
+        text-align: start;
+        align-self: flex-start;
+    }
+
+    .why-choose-us__content {
+        gap: 34px;
+    }
+
+    .why-choose-us__items {
+        gap: 12.5px 0px;
+        justify-content: flex-start;
+    }
+
+    .why-choose-us__item {
+        flex: 1 0 100%;
+        flex-direction: row;
+        max-width: none;
+        gap: 17px;
+    }
+
+    .why-choose-us__item:nth-of-type(even) {
+        margin-left: auto;
+        max-width: 212px;
+    }
+
+    .why-choose-us__item-image-wrap {
+        max-width: 89px;
+        width: 100%;
+    }
+
+    .why-choose-us__item-text {
+        color: #FFF;
+        max-width: 160px;
+        text-align: start;
+    }
+
+    .why-choose-us__last-text {
+        max-width: 242px;
+        line-height: 1.4;
+    }
+
+    /* Обрезка лишнего пространства сверху */
+    .why-choose-us__last-text::before {
+        margin-top: calc((0.72 - 1.4) * 0.5em);
+    }
+
+    /* Обрезка снизу (если нужно) */
+    .why-choose-us__last-text::after {
+        margin-bottom: calc((0.72 - 1.4) * 0.5em);
+    }
+}
+
+
+/* Зачем нужно страхование */
+
+.why-need {}
+
+.why-need__container {}
+
+.why-need__title {}
+
+.why-need__content {
+    display: flex;
+    gap: 40px;
+}
+
+.why-need__content>* {
+    flex: 1 0 calc(50% - 40px);
+}
+
+.why-need__content {
+    display: flex;
+    gap: 40px;
+}
+
+.why-need__content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.why-need__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 580px;
+    width: 100%;
+}
+
+.why-need__text {}
+
+.why-need__video-poster-wrap {
+    max-width: 580px;
+    width: 100%;
+    max-height: 325px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.why-need__video-poster-img {}
+
+.why-need__content-action {
+    padding: 40px 30px;
+    border-radius: 12px;
+    background: linear-gradient(114deg, #307ACC, #065BBA, #226FC6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-need__content-action-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 44px;
+}
+
+.why-need__action-image-wrap {
+    max-width: 128px;
+    max-height: 128px;
+}
+
+.why-need__content-action-text {
+    max-width: 454px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #FFF;
+    text-align: center;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+}
+
+/* Обрезка лишнего пространства сверху */
+.why-need__content-action-text::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1.4) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.why-need__content-action-text::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.4) * 0.5em);
+}
+
+.why-need__button {
+    max-width: 290px;
+}
+
+
+@media (max-width: 1201px) {
+    .why-need__content-action-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .why-need__content {
+        gap: 30px;
+    }
+
+    .why-need__texts {
+        gap: 25px;
+    }
+
+    .why-need__content-action-text {
+        font-size: 15px;
+    }
+
+    .why-need__content-action-inner {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 830px) {
+    .why-need__content {
+        gap: 25px;
+    }
+
+    .why-need__texts {
+        gap: 20px;
+    }
+
+    .why-need__content-action-text {
+        font-size: 14px;
+    }
+
+    .why-need__content-action-inner {
+        gap: 30px;
+    }
+
+    .why-need__action-image-wrap {
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 769px) {
+    .why-need__content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .why-need__video-poster-wrap {
+        max-width: none;
+        max-height: 400px;
+    }
+
+    .why-need__content-action-text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 581px) {
+    .why-need__texts {
+        gap: 18px;
+    }
+
+    .why-need__content-action-text {
+        font-size: 14px;
+    }
+
+    .why-need__button {
+        padding: 17.5px 30px;
+        max-width: 220px;
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 421px) {
+    .why-need__content-action {
+        padding: 28px 25px;
+    }
+
+    .why-need__content-action-text {
+        font-size: 13px;
+    }
+
+    .why-need__content {
+        gap: 24px;
+    }
+
+    .why-need__content-action-inner {
+        gap: 24px;
+    }
+
+    .why-need__action-image-wrap {
+        max-width: 72px;
+    }
+}
+
+
+/* Услуги автострахования */
+.services {}
+
+.services__container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.services__title {
+    margin-bottom: 60px;
+}
+
+.services__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 25px 20px;
+    margin-bottom: 60px;
+}
+
+.services__card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+    background: #FFF;
+    border-radius: 6px;
+    box-shadow: 0px 4px 20px 0px rgba(144, 195, 243, 0.34);
+}
+
+.services__card-inner {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 24px;
+}
+
+.services__card-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.services__card-title {
+    color: #065BBA;
+    max-width: 224px;
+}
+
+.services__card-desc {}
+
+.services__card-button {
+    align-self: flex-end;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+}
+
+/* Обрезка лишнего пространства сверху */
+.services__card-button::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.services__card-button::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1) * 0.5em);
+}
+
+.services__button {
+    max-width: 275px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1201px) {
+    .services__title {
+        margin-bottom: 55px;
+    }
+
+    .services__cards {
+        margin-bottom: 55px;
+    }
+
+    .services__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1025px) {
+    .services__container {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .services__cards {
+        gap: 20px 18px;
+    }
+
+    .services__card {
+        padding: 30px 20px;
+    }
+
+    .services__card-texts {
+        gap: 24px;
+    }
+
+    .services__card-button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 830px) {
+    .services__container {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .services__title {
+        margin-bottom: 50px;
+    }
+
+    .services__cards {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 50px;
+    }
+
+    .services__card-texts {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 769px) {
+    .services__title {
+        margin-bottom: 51px;
+    }
+
+    .services__cards {
+        gap: 18px 14px;
+        margin-bottom: 51px;
+    }
+
+    .services__card-inner {
+        gap: 26px;
+    }
+
+    .services__card-button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 581px) {
+    .services__container {
+        padding-top: 41px;
+        padding-bottom: 41px;
+    }
+
+    .services__title {
+        margin-bottom: 46px;
+    }
+
+    .services__cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: auto;
+        gap: 14px;
+        margin-bottom: 50px;
+    }
+
+    .services__card {
+        padding: 22px 16px;
+    }
+
+    .services__card-inner {
+        gap: 28px;
+    }
+
+    .services__card-title {
+        max-width: 180px;
+        line-height: 1.2;
+    }
+
+    /* Обрезка лишнего пространства сверху */
+    .services__card-title::before {
+        margin-top: calc((0.72 - 1.2) * 0.5em);
+    }
+
+    /* Обрезка снизу (если нужно) */
+    .services__card-title::after {
+        margin-bottom: calc((0.72 - 1.2) * 0.5em);
+    }
+
+    .services__card-desc {
+        display: none;
+    }
+
+    .services__card-button {
+        font-size: 16px;
+    }
+
+    .services__button {
+        max-width: none;
+    }
+}
+
+@media (max-width: 421px) {
+    .services__container {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .services__title {
+        margin-bottom: 24px;
+    }
+
+    .services__cards {
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .services__card-button {
+        font-size: 14px;
+    }
+}
+
+
+/* Программы автострахования */
+
+.programs {}
+
+.programs__container {}
+
+.programs__top-desc {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.programs__title {
+    max-width: 440px;
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    .programs__title {
+        margin-bottom: 0;
+    }
+}
+
+.programs__top-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.programs__top-text p {
+    font-weight: 700;
+    color: #065BBA;
+    max-width: 410px;
+
+}
+
+.programs__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: 1fr;
+    margin-bottom: 50px;
+}
+
+.programs__card {
+    padding: 30px 37px;
+    border-radius: 12px;
+    background: linear-gradient(136deg, #387fce 20%, #065BBA, #226FC6);
+}
+
+.programs__card-inner {
+    display: flex;
+    gap: 38px;
+}
+
+.programs__card-image-wrap {
+    max-width: 131px;
+    width: 100%;
+    height: 100%;
+}
+
+.programs__card-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.programs__card-pre-title {
+    line-height: 1.2;
+    color: #FFF;
+    max-width: 210px;
+}
+
+/* Обрезка лишнего пространства сверху */
+.programs__card-pre-title::before {
+    margin-top: calc((0.72 - 1.2) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.programs__card-pre-title::after {
+    margin-bottom: calc((0.72 - 1.2) * 0.5em);
+}
+
+.programs__card-text {
+    color: #FFF;
+}
+
+.programs__button {
+    max-width: 275px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1201px) {
+    .programs__top-desc {
+        margin-bottom: 47px;
+    }
+
+    .programs__cards {
+        margin-bottom: 47px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .programs__cards {
+        gap: 18px;
+    }
+
+    .programs__card {
+        padding: 25px 30px;
+    }
+
+    .programs__card-inner {
+        gap: 30px;
+    }
+
+    .programs__card-desc {
+        gap: 25px;
+    }
+
+    .programs__card-text {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 830px) {
+    .programs__top-desc {
+        margin-bottom: 42px;
+    }
+
+    .programs__cards {
+        gap: 15px;
+        margin-bottom: 42px;
+    }
+
+    .programs__card-desc {
+        gap: 20px;
+    }
+
+    .programs__card-image-wrap {
+        max-width: 118px;
+    }
+}
+
+@media (max-width: 769px) {
+    .programs__top-desc {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .programs__top-text {
+        width: auto;
+    }
+
+    .programs__cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        grid-auto-rows: auto;
+    }
+
+    .programs__card {
+        padding: 20px 25px;
+    }
+
+    .programs__card-inner {
+        gap: 25px;
+    }
+
+    .programs__card-image-wrap {
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 581px) {
+    .programs__top-desc {
+        margin-bottom: 35px;
+    }
+
+    .programs__cards {
+        gap: 8px;
+        margin-bottom: 35px;
+    }
+
+    .programs__card {
+        padding: 20px 20px 20px 18px;
+    }
+
+    .programs__card-inner {
+        gap: 20px;
+    }
+
+    .programs__card-desc {
+        gap: 18px;
+    }
+
+    .programs__button {
+        max-width: none;
+    }
+}
+
+@media (max-width: 421px) {
+    .programs__top-desc {
+        margin-bottom: 24px;
+    }
+
+    .programs__top-text,
+    .programs__top-text p {
+        font-size: 11px;
+        line-height: 1.4;
+        max-width: 270px;
+    }
+
+    /* Обрезка лишнего пространства сверху */
+    .programs__top-text::before,
+    .programs__top-text *:not(.bold-text)::before {
+        margin-top: calc((0.72 - 1.4) * 0.5em);
+    }
+
+    /* Обрезка снизу (если нужно) */
+    .programs__top-text::after,
+    .programs__top-text *:not(.bold-text)::after {
+        margin-bottom: calc((0.72 - 1.4) * 0.5em);
+    }
+
+    .programs__cards {
+        gap: 5px;
+        margin-bottom: 24px;
+    }
+
+    .programs__card {
+        padding: 20px 20px 20px 14px;
+    }
+
+    .programs__card-image-wrap {
+        max-width: 70px;
+    }
+
+    .programs__card-pre-title {
+        max-width: 170px;
+    }
+}

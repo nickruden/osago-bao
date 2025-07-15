@@ -1,0 +1,63 @@
+.faq {}
+
+.faq__container {}
+
+.faq__title {}
+
+.faq__accordion {
+    margin-bottom: 50px;
+}
+
+.faq__button {
+    margin: 0 auto;
+    max-width: 273px;
+}
+
+@media (max-width: 1201px) {
+    .faq__title {
+        margin-bottom: 47px;
+    }
+
+    .faq__accordion {
+        margin-bottom: 47px;
+    }
+}
+
+@media (max-width: 1025px) {}
+
+@media (max-width: 830px) {
+    .faq__title {
+        margin-bottom: 42px;
+    }
+
+    .faq__accordion {
+        margin-bottom: 42px;
+    }
+}
+
+@media (max-width: 769px) {}
+
+@media (max-width: 581px) {
+    .faq__title {
+        margin-bottom: 38px;
+    }
+
+    .faq__accordion {
+        margin-bottom: 38px;
+    }
+
+    .faq__button {
+        margin: 0 auto;
+        max-width: none;
+    }
+}
+
+@media (max-width: 421px) {
+    .faq__title {
+        margin-bottom: 32px;
+    }
+
+    .faq__accordion {
+        margin-bottom: 32px;
+    }
+}

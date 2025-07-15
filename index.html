@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОСАГО-ВАО</title>
+
+
+    <!-- БИБЛИОТЕКИ -->
+    <link rel="stylesheet" href="./assets/libs/swiper/swiper-bundle.min.css">
+
+
+    <!-- ОБЩИЕ СТИЛИ -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/custom.css">
+
+    <link rel="stylesheet" href="./styles/UI/button.css">
+    <link rel="stylesheet" href="./styles/UI/input.css">
+
+    <link rel="stylesheet" href="./styles/components/header.css">
+    <link rel="stylesheet" href="./styles/components/footer.css">
+    <link rel="stylesheet" href="./styles/components/my-form.css">
+    <link rel="stylesheet" href="./styles/components/my-accordion.css">
+
+    <link rel="stylesheet" href="./styles/components/sections/lead-section.css">
+    <link rel="stylesheet" href="./styles/components/sections/recommends.css">
+    <link rel="stylesheet" href="./styles/components/sections/faq.css">
+    <link rel="stylesheet" href="./styles/components/sections/hero-sections.css">
+
+
+    <!-- СТИЛИ СТРАНИЦЫ -->
+    <link rel="stylesheet" href="./styles/pages/category-page.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="my-container header__container">
+            <div class="header__top-content">
+                <div class="header__left-top">
+                    <a href="./index.html" class="header__logo-wrap">
+                        <img src="./assets/images/blue-logo.svg" alt="логотип ОСАГО-ВАО" class="header__logo-img">
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="header__menu-items">
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Категории</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__top-right">
+                    <div class="header__contacts">
+                        <a href="tel:+79260494292" class="header__phone --linkColor-blue">+7 (926) 049-42-92</a>
+                        <button
+                            class="my-button --buttonColor-light --buttonSize-small header__top-button">Заявка</button>
+                    </div>
+                    <button class="burger-button" data-toggle="#header-mobile-content">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="header__mobile-content" data-toggle-id="header-mobile-content"></div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- блок вроде повторяется на других страницах, вроде шаблон, поэтому стили также отдельно -->
+        <section class="hero-section">
+            <div class="hero-section__wrapper">
+                <div class="hero-section__bg-image">
+                    <img src="./assets/images/pages/main/hero-section/bg-img.png" alt="">
+                </div>
+                <div class="my-container hero-section__container">
+                    <h1 class="hero-section__title">Автострахование <br> в Москве</h1>
+                    <p class="standart-text hero-section__pre-title">Оформите автострахование онлайн на официальном сайте — быстро, выгодно и
+                        безопасно. Купить полис можно в пару кликов без визита в офис.</p>
+                    <form action="" class="my-form hero-section__form">
+                        <div class="my-form__fields">
+                            <div class="my-form__input"><input type="text" class="my-input" placeholder="Ваше имя">
+                            </div>
+                            <div class="my-form__input"><input type="text" name="input-phone" class="my-input" placeholder="Номер телефона"></div>
+                            <button class="my-button my-form__button">Отправить заявку</button>
+                            <p class="my-form__agreement-text">Подтверждаю согласие на обработку персональных данных в
+                                соответствии с <a href="">Политикой в области обработки и защиты персональных данных</a>
+                                и <a href="">Пользовательским соглашением</a></p>
+                        </div>
+                    </form>
+                    <div class="hero-section__features">
+                        <div class="hero-section__feature-item"><img
+                                src="./assets/images/pages/main/hero-section/features/image-1.svg" alt="">Лучшие цены в городе
+                        </div>
+                        <div class="hero-section__feature-item"><img
+                                src="./assets/images/pages/main/hero-section/features/image-2.svg" alt="">Покупка в пару кликов
+                        </div>
+                        <div class="hero-section__feature-item"><img
+                                src="./assets/images/pages/main/hero-section/features/image-3.svg" alt="">Доверие и надежность
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="programs section-padding">
+            <div class="my-container programs__container">
+                <div class="programs__top-desc">
+                    <h2 class="section-title programs__title">Программы <br> автострахования</h2>
+                    <div class="programs__top-text"> <p class="standart-text"> Наша страховая компания предлагает оформить следующие виды автострахования:</p>
+                    </div>
+                </div>
+                <div class="programs__cards">
+                    <div class="programs__card">
+                        <div class="programs__card-inner">
+                            <div class="programs__card-image-wrap">
+                                <img src="./assets/images/pages/main/programs/osago.png" alt="">
+                            </div>
+                            <div class="programs__card-desc">
+                                <h3 class="pre-title-text programs__card-pre-title">Страхование ОСАГО</h3>
+                                <p class="standart-text programs__card-text">Полис, который должен быть у каждого водителя. Оформите ОСАГО за
+                                    5 минут онлайн.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="programs__card">
+                        <div class="programs__card-inner">
+                            <div class="programs__card-image-wrap">
+                                <img src="./assets/images/pages/main/programs/kasko.png" alt="">
+                            </div>
+                            <div class="programs__card-desc">
+                                <h3 class="pre-title-text programs__card-pre-title">Страхование КАСКО</h3>
+                                <p class="standart-text programs__card-text">КАСКО - ваша финансовая защита при угоне, ДТП и неожиданном
+                                    повреждении автомобиля.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="programs__card">
+                        <div class="programs__card-inner">
+                            <div class="programs__card-image-wrap">
+                                <img src="./assets/images/pages/main/programs/dsago.png" alt="">
+                            </div>
+                            <div class="programs__card-desc">
+                                <h3 class="pre-title-text programs__card-pre-title">Страхование ДСАГО</h3>
+                                <p class="standart-text programs__card-text">Дополнительное покрытие по ОСАГО.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="programs__card">
+                        <div class="programs__card-inner">
+                            <div class="programs__card-image-wrap">
+                                <img src="./assets/images/pages/main/programs/osago.png" alt="">
+                            </div>
+                            <div class="programs__card-desc">
+                                <h3 class="pre-title-text programs__card-pre-title">От несчастных случаев</h3>
+                                <p class="standart-text programs__card-text">Страхование от несчастных случаев водителя и пассажиров.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="my-button programs__button">Отправить заявку</button>
+            </div>
+        </section>
+        <section class="services colored-block-lightColor section-padding">
+            <div class="colored-block__wrapper">
+                <div class="my-container services__container">
+                    <h2 class="section-title services__title">Услуги <br> автострахования</h2>
+                    <div class="services__cards">
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">Стандартный полис ОСАГО</h3>
+                                    <p class="services__card-desc standart-text">Защищает вас от расходов при нанесении ущерба третьим лицам в ДТП.</p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">Полис ОСАГО для такси</h3>
+                                    <p class="services__card-desc standart-text">Обязательное страхование ответственности водителей, занимающихся перевозкой пассажиров.</p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">Полис ОСАГО для мотоцикла</h3>
+                                    <p class="services__card-desc standart-text">Обязательное страхование ответственности владельца мотоцикла.</p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">Полис ОСАГО на&nbsp;3/6&nbsp;месяцев</h3>
+                                    <p class="services__card-desc standart-text">Временное ОСАГО владельцев транспортных средств. </p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">Полис ОСАГО без ограничений</h3>
+                                    <p class="services__card-desc standart-text">Полис ОСАГО без ограничений позволяет управлять автомобилем любому водителю, независимо от того, указан он в страховке или нет.</p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">Продление <br> ОСАГО</h3>
+                                    <p class="services__card-desc standart-text">Переоформление действующего полиса ОСАГО на новый срок.</p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">Полное <br> КАСКО</h3>
+                                    <p class="services__card-desc standart-text">Добровольное автострахование, позволяющее застраховать автомобиль от угона, ущерба и других непредвиденных ситуаций.</p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">КАСКО для&nbsp;мотоцикла</h3>
+                                    <p class="services__card-desc standart-text">Добровольное страхование, защищающее мотоцикл от угона, повреждений при ДТП, стихийных бедствий, пожара, противоправных действий третьих лиц и пр.</p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">КАСКО <br> для&nbsp;такси</h3>
+                                    <p class="services__card-desc standart-text">Добровольное страхование, защищающее такси от угона, повреждений при ДТП, стихийных бедствий, пожара, противоправных действий третьих лиц и пр.</p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">Мини- <br> КАСКО</h3>
+                                    <p class="services__card-desc standart-text">Упрощённая и доступная версия классического полиса КАСКО. Такой вариант страхования покрывает ограниченное количество рисков.</p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">Продление КАСКО</h3>
+                                    <p class="services__card-desc standart-text">Продление (или пролонгация) КАСКО означает оформление нового страхового периода без перерыва в защите.</p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="services__card">
+                            <div class="services__card-inner">
+                                <div class="services__card-texts">
+                                    <h3 class="services__card-title pre-title-text">Юрист <br> по КАСКО</h3>
+                                    <p class="services__card-desc standart-text">Часто возникают споры по занижению выплат, отказам в компенсации или затягиванию сроков. Именно в таких ситуациях нужна помощь юриста.</p>
+                                </div>
+                                <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="my-button services__button">Отправить заявку</button>
+                </div>
+            </div>
+        </section>
+        <section class="why-need section-padding">
+            <div class="my-container why-need__container">
+                <h2 class="section-title why-need__title">Зачем нужно <br> страхование?</h2>
+                <div class="why-need__content">
+                    <div class="why-need__content-text">
+                        <div class="why-need__texts">
+                            <p class="standart-text why-need__text"><span class="bold-text">Автострахование</span> — это не просто формальность, а важная мера финансовой защиты на случай ДТП, угона, повреждений машины или несчастных случаев. Оформление полиса страхования автомобиля позволяет минимизировать затраты в самых разных ситуациях и защитить интересы водителя, пассажиров и третьих лиц.</p>
+                            <p class="standart-text why-need__text">На официальном сайте нашей компании вы можете купить полис автострахования онлайн в удобное время. Мы предлагаем страховые услуги рядом с вами, с прозрачными ценами, понятными условиями и оперативной поддержкой.</p>
+                        </div>
+                        <div class="why-need__video-poster-wrap">
+                            <img src="./assets/images/pages/main/why-need/image.png" alt="" class="why-need__video-poster-img">
+                        </div>
+                    </div>
+                    <div class="why-need__content-action">
+                        <div class="why-need__content-action-inner">
+                            <div class="why-need__action-image-wrap">
+                                <img src="./assets/images/pages/main/why-need/palanet.svg" alt="">
+                            </div>
+                            <p class="why-need__content-action-text">Оформить полис можно онлайн — это быстро, удобно и официально. Актуальные тарифы и стоимость зависят от типа машины, стажа водителя и других параметров. <span class="bold-text"> Узнайте цену сейчас и купите полис, не выходя из дома.</span></p>
+                            <button class="my-button --buttonColor-light why-need__button">Отправить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="why-choose-us colored-block section-padding">
+            <div class="colored-block__wrapper">
+                <div class="my-container why-choose-us__container">
+                    <h2 class="section-title why-choose-us__title">Почему страхование <br> оформляют у нас</h2>
+                    <div class="why-choose-us__content">
+                        <div class="why-choose-us__items">
+                            <div class="why-choose-us__item">
+                                <div class="why-choose-us__item-image-wrap">
+                                    <img src="./assets/images/pages/main/why-choose-us/item-1.png" alt="">
+                                </div>
+                                <div class="standart-text why-choose-us__item-text">Индивидуальный подход к каждому клиенту</div>
+                            </div>
+                            <div class="why-choose-us__item">
+                                <div class="why-choose-us__item-image-wrap">
+                                    <img src="./assets/images/pages/main/why-choose-us/item-2.png" alt="">
+                                </div>
+                                <div class="standart-text why-choose-us__item-text">Честная цена <br> и гибкие условия</div>
+                            </div>
+                            <div class="why-choose-us__item">
+                                <div class="why-choose-us__item-image-wrap">
+                                    <img src="./assets/images/pages/main/why-choose-us/item-3.png" alt="">
+                                </div>
+                                <div class="standart-text why-choose-us__item-text">Быстрое оформление на&nbsp;официальном сайте</div>
+                            </div>
+                            <div class="why-choose-us__item">
+                                <div class="why-choose-us__item-image-wrap">
+                                    <img src="./assets/images/pages/main/why-choose-us/item-4.png" alt="">
+                                </div>
+                                <div class="standart-text why-choose-us__item-text">Полное покрытие <br> рисков</div>
+                            </div>
+                            <div class="why-choose-us__item">
+                                <div class="why-choose-us__item-image-wrap">
+                                    <img src="./assets/images/pages/main/why-choose-us/item-5.png" alt="">
+                                </div>
+                                <div class="standart-text why-choose-us__item-text">Сопровождение в&nbsp;течение срока действия договора</div>
+                            </div>
+                        </div>
+                        <p class="standart-text why-choose-us__last-text">Выбирая надёжную страховую компанию, вы защищаете не только имущество, но и свое будущее.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="doc-list section-padding">
+            <div class="my-container doc-list__container">
+                <h2 class="section-title doc-list__title">Список необходимых <br> документов</h2>
+                <div class="doc-list__items">
+                    <div class="doc-list__item">
+                        <div class="doc-list__item-title pre-title-text">Для физических лиц:</div>
+                        <ul class="doc-list__list">
+                            <li class="doc-list__list-item"> <p class="standart-text">Паспорт страхующего лица (гражданина РФ);</p></li>
+                            <li class="doc-list__list-item"> <p class="standart-text">Водительское удостоверение каждого водителя, допущенного к управлению автомобилем;</p></li>
+                            <li class="doc-list__list-item"> <p class="standart-text">Паспорт транспортного средства (ПТС) и/или свидетельство о регистрации автомобиля;</li>
+                            <li class="doc-list__list-item"> <p class="standart-text">Договор купли-продажи (если авто новое), либо иные документы, подтверждающие право владения или интерес к ТС;</p></li>
+                            <li class="doc-list__list-item"> <p class="standart-text">Документы на установленное оборудование (сигнализация, спутниковая система и т.д.) — при необходимости.</p></li>
+                        </ul>
+                    </div>
+                    <div class="doc-list__item">
+                        <div class="doc-list__item-title pre-title-text">Для юридических лиц и ИП:</div>
+                        <ul class="doc-list__list">
+                            <li class="doc-list__list-item"> <p class="standart-text"> Свидетельство о регистрации юридического лица или ИП;</p></li>
+                            <li class="doc-list__list-item"> <p class="standart-text">Документы, подтверждающие право собственности или аренду транспортного средства;</p></li>
+                            <li class="doc-list__list-item"> <p class="standart-text">Водительские удостоверения сотрудников, управляющих автомобилем.</p></li>
+                        </ul>
+                        <div class="doc-list__notify">
+                            Если авто в кредите или залоге, потребуется предоставить соответствующий договор.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- стили этой секции отдельно(это может быть самостоятельный блок вопрос-ответ с каким-угодно подходящим контентом)-->
+        <section class="faq section-padding">
+            <div class="my-container faq__container">
+                <h2 class="section-title faq__title">Часто задаваемые вопросы</h2>
+                <div class="my-accordion faq__accordion" id="accordion1">
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="true" aria-controls="answer-1-1">
+                                Можно ли купить полис автострахования онлайн?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-1" class="my-accordion__collapse show" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Да, вы можете оформить и купить страховой полис на нашем официальном сайте — быстро,
+                                    удобно и официально.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-2">
+                                Сколько стоит автострахование?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-2" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-3">
+                                Какие случаи покрываются автостраховкой?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-3" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Да, вы можете оформить и купить страховой полис на нашем официальном сайте — быстро,
+                                    удобно и официально.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-4">
+                                Как быстро я получу электронный полис?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-4" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-5">
+                                Можно ли оформить автострахование рядом с домом?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-5" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-6">
+                                Обязательно ли иметь страховку на машину?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-6" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-7">
+                                Что делать при наступлении страхового случая?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-7" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="my-button faq__button">Спросить еще</button>
+            </div>
+        </section>
+
+        <!-- блок сквозной -->
+        <section class="recommends section-padding">
+            <div class="my-container recommends__container">
+                <h2 class="section-title recommends__title">Возможно, вам будет интересно</h2>
+                <div class="recommends__items">
+                    <div class="recommends__item">
+                        <div class="recommends__item-title">Страхование <br> недвижимости и&nbsp;имущества</div>
+                        <svg class="recommends__arrow">
+                            <use href="./assets/images/sprite.svg#icon-arrow" />
+                        </svg>
+                        <div class="recommends__icon-wrap">
+                            <img src="./assets/images/pages/main/recommends/item-1.png" alt=""
+                                class="recommends__icon-img">
+                        </div>
+                    </div>
+                    <div class="recommends__item">
+                        <div class="recommends__item-title">Ипотечное <br> страхование</div>
+                        <svg class="recommends__arrow">
+                            <use href="./assets/images/sprite.svg#icon-arrow" />
+                        </svg>
+                        <div class="recommends__icon-wrap">
+                            <img src="./assets/images/pages/main/recommends/item-2.png" alt=""
+                                class="recommends__icon-img">
+                        </div>
+                    </div>
+                    <div class="recommends__item">
+                        <div class="recommends__item-title">Имущество <br> юридических <br> лиц</div>
+                        <svg class="recommends__arrow">
+                            <use href="./assets/images/sprite.svg#icon-arrow" />
+                        </svg>
+                        <div class="recommends__icon-wrap">
+                            <img src="./assets/images/pages/main/recommends/item-3.png" alt=""
+                                class="recommends__icon-img">
+                        </div>
+                    </div>
+                    <div class="recommends__item">
+                        <div class="recommends__item-title">Несчастный <br> случай</div>
+                        <svg class="recommends__arrow">
+                            <use href="./assets/images/sprite.svg#icon-arrow" />
+                        </svg>
+                        <div class="recommends__icon-wrap">
+                            <img src="./assets/images/pages/main/recommends/item-4.png" alt=""
+                                class="recommends__icon-img">
+                        </div>
+                    </div>
+                    <div class="recommends__item">
+                        <div class="recommends__item-title">Страховка <br> для путешествий</div>
+                        <svg class="recommends__arrow">
+                            <use href="./assets/images/sprite.svg#icon-arrow" />
+                        </svg>
+                        <div class="recommends__icon-wrap">
+                            <img src="./assets/images/pages/main/recommends/item-5.png" alt=""
+                                class="recommends__icon-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- блок сквозной -->
+        <section class="lead-section colored-block section-padding">
+            <div class="colored-block__wrapper">
+                <div class="my-container lead-section__container">
+                    <form action="" class="my-form lead-section__form">
+                        <h2 class="section-title my-form__title">Оформление полиса для&nbsp;частных лиц</h2>
+                        <p class="my-form__pre-title">Оставьте заявку, мы перезвоним в&nbsp;течение 30 минут</p>
+                        <div class="my-form__fields">
+                            <div class="my-form__input"><input type="text" class="my-input" placeholder="Ваше имя">
+                            </div>
+                            <div class="my-form__input"><input type="tel" name="input-phone" class="my-input"
+                                    placeholder="Номер телефона"></div>
+                            <div class="my-form__input"><input type="text" class="my-input" placeholder="Город"></div>
+                            <div class="my-form__input"><input type="email" class="my-input" placeholder="E-mail"></div>
+                            <button class="my-button --buttonColor-light my-form__button">Отправить заявку</button>
+                            <p class="my-form__agreement-text">Подтверждаю согласие на обработку персональных данных в
+                                соответствии с <a href="">Политикой в области обработки и защиты персональных данных</a>
+                                и <a href="">Пользовательским соглашением</a></p>
+                        </div>
+                    </form>
+                    <div class="lead-section__image-wrap">
+                        <img src="./assets/images/pages/main/lead-section/block-img.png"
+                            alt="картинка девушка с зонтом звонит по телефону" class="lead-section__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="my-container footer__container">
+            <div class="footer__top">
+                <div class="footer__top-left">
+                    <a class="footer__logo-wrap">
+                        <img src="./assets/images/white-logo.svg" alt="логотип ОСАГО-ВАО" class="footer__logo-img">
+                    </a>
+                    <nav class="footer__menu">
+                        <ul class="footer__menu-items">
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Автострахование</a></li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Страхование недвижимости
+                                    и&nbsp;имущества</a></li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Ипотечное страхование</a>
+                            </li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Имущество юридических
+                                    лиц</a></li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Несчастный случай</a>
+                            </li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Путешествия</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__top-right">
+                    <div class="footer__contacts">
+                        <div class="footer__contact-info">
+                            <div class="footer__contact-title">Режим работы:</div>
+                            <div class="footer__contact-items">
+                                <div class="footer__contact-item">
+                                    <div class="footer__work-time">
+                                        <span>ПН-ПТ</span><span>10:00-19:00</span>
+                                    </div>
+                                    <div class="footer__work-time">
+                                        <span>СБ-ВС</span><span>10:00-17:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__contact-info">
+                            <div class="footer__contact-title">Звонки на номер:</div>
+                            <div class="footer__contact-items">
+                                <div class="footer__contact-item">
+                                    <a href="tel:+79260494292" class="--linkColor-white footer__contact-phone">+7 (926)
+                                        049-42-92</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="my-button --buttonSize-small footer__button">Заявка</button>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__copyright-text">&copy; ОСАГО-ВАО, 2025</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- БИБЛИОТЕКИ -->
+    <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
+
+
+    <!-- ОБЩИЕ СКРИПТЫ -->
+    <script src="./assets/scripts/toggle.js"></script>
+    <script src="./assets/scripts/my-accordion.js"></script>
+    <script src="./assets/scripts/phone-mask.js"></script>
+
+</body>
+
+</html>

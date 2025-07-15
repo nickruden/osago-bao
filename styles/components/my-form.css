@@ -1,0 +1,196 @@
+.my-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.my-form__title {
+    max-width: 501px;
+    margin-bottom: 0px;
+}
+
+.my-form__pre-title {
+    max-width: 383px;
+    font-size: 23px;
+    line-height: 1.2;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+}
+
+/* Обрезка лишнего пространства сверху */
+.my-form__pre-title::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1.2) * 0.5em);
+    /* Подбираем коэффициент */
+}
+
+/* Обрезка снизу (если нужно) */
+.my-form__pre-title::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.2) * 0.5em);
+}
+
+.my-form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 387px;
+}
+
+.my-form__input {}
+
+.my-form__button {
+    margin-bottom: 10px;
+}
+
+.my-form__agreement-text {
+    max-width: 386px;
+    font-size: 12px;
+    line-height: 1.4;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+    color: #F6FBFD;
+}
+
+/* Обрезка лишнего пространства сверху */
+.my-form__agreement-text::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1.4) * 0.5em);
+    /* Подбираем коэффициент */
+}
+
+/* Обрезка снизу (если нужно) */
+.my-form__agreement-text::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.4) * 0.5em);
+}
+
+.my-form__agreement-text a {
+    color: #7AD4F8;
+}
+
+.my-form__agreement-text a:hover,
+.my-form__agreement-text a:focus,
+.my-form__agreement-text a:active {
+    color: #6cbbda;
+}
+
+@media (max-width: 1201px) {
+    .my-form__title {
+        max-width: 470px;
+    }
+
+    .my-form__pre-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .my-form {
+        gap: 30px;
+    }
+
+    .my-form__title {
+        max-width: 430px;
+    }
+
+    .my-form__pre-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 830px) {
+    .my-form__agreement-text {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 769px) {
+    .my-form {
+        gap: 35px;
+    }
+
+    .my-form__pre-title {
+        font-size: 20px;
+    }
+
+    .my-form__fields {
+        max-width: 470px;
+    }
+
+    .my-form__agreement-text {
+        font-size: 12px;
+        max-width: none;
+    }
+}
+
+@media (max-width: 581px) {
+    .my-form {
+        gap: 30px;
+    }
+
+    .my-form__pre-title {
+        max-width: 330px;
+        font-size: 16px;
+    }
+
+    .my-form__button {
+        margin-bottom: 0px;
+    }
+
+    .my-form__agreement-text {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 421px) {
+    .my-form {
+        gap: 22px;
+    }
+
+    .my-form__pre-title {
+        max-width: 270px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* Обрезка лишнего пространства сверху */
+    .my-form__pre-title::before {
+        margin-top: calc((0.72 - 1.4) * 0.5em);
+        /* Подбираем коэффициент */
+    }
+
+    /* Обрезка снизу (если нужно) */
+    .my-form__pre-title::after {
+        margin-bottom: calc((0.72 - 1.4) * 0.5em);
+    }
+
+    .my-form__agreement-text {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    /* Обрезка лишнего пространства сверху */
+    .my-form__agreement-text::before {
+        margin-top: calc((0.72 - 1.6) * 0.5em);
+    }
+
+    /* Обрезка снизу (если нужно) */
+    .my-form__agreement-text::after {
+        margin-bottom: calc((0.72 - 1.6) * 0.5em);
+    }
+}

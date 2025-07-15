@@ -1,0 +1,205 @@
+.recommends {}
+
+.recommends__container {}
+
+.recommends__title {
+    max-width: 480px;
+    margin-bottom: 40px;
+}
+
+.recommends__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    grid-auto-rows: 1fr;
+}
+
+.recommends__item {
+    height: 100%;
+    padding: 30px 30px 20px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 45px;
+    background-color: #FFF;
+    border-radius: 6px;
+    box-shadow: 0px 4px 20px 0px rgba(144, 195, 243, 0.34);
+    cursor: pointer;
+    position: relative;
+}
+
+.recommends__item-title {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #065BBA;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+}
+
+/* Обрезка лишнего пространства сверху */
+.recommends__item-title::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1.2) * 0.5em);
+    /* Подбираем коэффициент */
+}
+
+/* Обрезка снизу (если нужно) */
+.recommends__item-title::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.2) * 0.5em);
+}
+
+.recommends__arrow {
+    width: 35px;
+    height: 16px;
+    color: #065BBA;
+    transition: color 0.3s;
+}
+
+.recommends__item:hover .recommends__item-title,
+.recommends__item:hover .recommends__arrow {
+    color: #064B98;
+}
+
+.recommends__icon-wrap {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    max-width: 100px;
+}
+
+.recommends__icon-img {}
+
+
+@media (max-width: 1201px) {
+    .recommends__title {
+        max-width: 450px;
+        margin-bottom: 38px;
+    }
+
+    .recommends__items {
+        gap: 35px;
+    }
+
+    .recommends__item-title {
+        font-size: 20px;
+        max-width: 210px;
+    }
+
+    .recommends__icon-wrap {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .recommends__title {
+        max-width: 400px;
+    }
+
+    .recommends__items {
+        gap: 30px;
+    }
+
+    .recommends__item {
+        padding: 25px 20px 20px 20px;
+    }
+
+    .recommends__item-title {
+        font-size: 18px;
+    }
+
+    .recommends__icon-wrap {
+        right: 20px;
+        max-width: 70px;
+    }
+}
+
+@media (max-width: 830px) {
+    .recommends__title {
+        max-width: 380px;
+        margin-bottom: 35px;
+    }
+
+    .recommends__items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 769px) {
+    .recommends__title {
+        max-width: 380px;
+        margin-bottom: 38px;
+    }
+
+    .recommends__icon-wrap {
+        max-width: 62px;
+    }
+}
+
+@media (max-width: 581px) {
+    .recommends__title {
+        margin-bottom: 34px;
+    }
+
+    .recommends__items {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        grid-auto-rows: auto;
+    }
+
+    .recommends__item {
+        padding: 20px 18px 22px 18px;
+        gap: 25px;
+    }
+
+    .recommends__item-title {
+        max-width: 250px;
+        font-size: 17px;
+    }
+
+    .recommends__item-title br {
+        display: none;
+    }
+
+    .recommends__icon-wrap {
+        bottom: 22px;
+        right: 18px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 421px) {
+    .recommends__title {
+        max-width: 380px;
+        margin-bottom: 32px;
+    }
+
+    .recommends__items {
+        gap: 10px;
+    }
+
+    .recommends__item {
+        padding: 16px 14px 18px 14px;
+        gap: 15.2px;
+    }
+
+    .recommends__item-title {
+        max-width: 140px;
+        font-size: 15px;
+    }
+
+    .recommends__icon-wrap {
+        bottom: 22px;
+        right: 14px;
+        max-width: 50px;
+    }
+}
