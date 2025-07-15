@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОСАГО-ВАО</title>
+
+
+    <!-- БИБЛИОТЕКИ -->
+    <link rel="stylesheet" href="../../assets/libs/swiper/swiper-bundle.min.css">
+
+
+    <!-- ОБЩИЕ СТИЛИ -->
+    <link rel="stylesheet" href="../../styles/reset.css">
+    <link rel="stylesheet" href="../../styles/custom.css">
+
+    <link rel="stylesheet" href="../../styles/UI/button.css">
+    <link rel="stylesheet" href="../../styles/UI/input.css">
+
+    <link rel="stylesheet" href="../../styles/components/header.css">
+    <link rel="stylesheet" href="../../styles/components/footer.css">
+    <link rel="stylesheet" href="../../styles/components/my-form.css">
+    <link rel="stylesheet" href="../../styles/components/my-accordion.css">
+    <link rel="stylesheet" href="../../styles/components/modal.css">
+
+    <link rel="stylesheet" href="../../styles/components/sections/lead-section.css">
+    <link rel="stylesheet" href="../../styles/components/sections/recommends.css">
+    <link rel="stylesheet" href="../../styles/components/sections/faq.css">
+    <link rel="stylesheet" href="../../styles/components/sections/hero-sections.css">
+
+
+    <!-- СТИЛИ СТРАНИЦЫ -->
+    <link rel="stylesheet" href="../../styles/pages/service-page.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="my-container header__container">
+            <div class="header__top-content">
+                <div class="header__left-top">
+                    <a href="../../index.html" class="header__logo-wrap">
+                        <img src="../../assets/images/blue-logo.svg" alt="логотип ОСАГО-ВАО" class="header__logo-img">
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="header__menu-items">
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Категории</a></li>
+                            <li class="header__menu-item"><a href="" class="header__menu-link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__top-right">
+                    <div class="header__contacts">
+                        <a href="tel:+79260494292" class="header__phone --linkColor-blue">+7 (926) 049-42-92</a>
+                        <button
+                            class="my-button --buttonColor-light --buttonSize-small header__top-button" data-modal-id="modal">Заявка</button>
+                    </div>
+                    <button class="burger-button" data-toggle="#header-mobile-content">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="header__mobile-content" data-toggle-id="header-mobile-content">
+
+            </div>
+        </div>
+    </header>
+
+    <!-- модальное окно(укажите атрибут id модальному окну и навесьте атрибут data-moda-id="#modal-id" на элемент, который откроет модальное окно) -->
+    <div class="my-modal" id="modal">
+        <div class="my-modal__container">
+            <button class="my-modal__close">&times;</button>
+            <div class="my-modal__content">
+                <form action="" class="my-form my-modal__form --bg-white">
+                    <h2 class="section-title my-form__title">Оформление <br> полиса онлайн</h2>
+                    <p class="my-form__pre-title">Ответим вам через 15 минут</p>
+                    <div class="my-form__fields">
+                        <div class="my-form__input"><input type="text" class="my-input" placeholder="Ваше имя">
+                        </div>
+                        <div class="my-form__input"><input type="tel" name="input-phone" class="my-input"
+                                placeholder="Номер телефона"></div>
+                        <div class="my-form__input"><input type="text" class="my-input" placeholder="Город"></div>
+                        <div class="my-form__input"><input type="email" class="my-input" placeholder="E-mail"></div>
+                        <button class="my-button my-form__button">Отправить заявку</button>
+                        <p class="my-form__agreement-text">Подтверждаю согласие на обработку персональных данных в
+                            соответствии с <a href="">Политикой в области обработки и защиты персональных данных</a>
+                            и <a href="">Пользовательским соглашением</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <!-- стили этой секции отдельно(это может быть самостоятельный блок вопрос-ответ с каким-угодно подходящим контентом)-->
+        <!-- чтобы правильно пользоваться данным блоком, надо правильно пользоваться аккордионом
+        - id у my-accordion всегда уникальный для разных блоков!!!
+        - data-parent - всегда является указателем на id того аккордиона, в котором находится!!! 
+        - aria-controls и id у my-accordion__collapse - связаны как кнопка открывающая тот контент, где совпадут эти атрибуты, поэтому у одного my-accordion__item они совпадают, НО ОНИ НЕ ДОЛЖНЫ ПОВТОРЯТСЯ НИГДЕ БОЛЬШЕ НА СТРАНИЦЕ НИ В ТОМ ЖЕ АККОРДИОНЕ, НИ В КАКОМ ЛИБО ДРУГОМ (если так не удобно скажите, по идее могу сделать по другому этот механизм) -->
+        <section class="faq section-padding">
+            <div class="my-container faq__container">
+                <h2 class="section-title faq__title">Что нужно знать</h2>
+                <div class="my-accordion faq__accordion" id="accordion2">
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="true" aria-controls="accordion2-answer-1-1">
+                                Как рассчитывается стоимость ОСАГО
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="accordion2-answer-1-1" class="my-accordion__collapse show" data-parent="#accordion2">
+                            <div class="my-accordion__body">
+                                <p>Цена полиса зависит от многих факторов:
+                                    – регион регистрации (например, в Москве тарифы выше);
+                                    – возраст и стаж водителя;
+                                    – мощность автомобиля;
+                                    – количество лиц, допущенных к управлению;
+                                    – наличие страховых историй.
+                                    Вы можете рассчитать стоимость онлайн через официальный сайт, введя номер авто и другие данные.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="accordion2-answer-1-2">
+                                Что такое электронный полис
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="accordion2-answer-1-2" class="my-accordion__collapse" data-parent="#accordion2">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="accordion2-answer-1-3">
+                                Европротокол и ОСАГО
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="accordion2-answer-1-3" class="my-accordion__collapse" data-parent="#accordion2">
+                            <div class="my-accordion__body">
+                                <p>Да, вы можете оформить и купить страховой полис на нашем официальном сайте — быстро,
+                                    удобно и официально.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="accordion2-answer-1-4">
+                                Преимущества оформления онлайн
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="accordion2-answer-1-4" class="my-accordion__collapse" data-parent="#accordion2">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="accordion2-answer-1-5">
+                                Риски и ограничения
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="accordion2-answer-1-5" class="my-accordion__collapse" data-parent="#accordion2">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="my-button faq__button">Спросить еще</button>
+            </div>
+        </section>
+
+        <!-- блок сквозной, но стили этой секции отдельно(это может быть самостоятельный блок вопрос-ответ с каким-угодно подходящим контентом)-->
+        <!-- чтобы правильно пользоваться данным блоком, надо правильно пользоваться аккордионом
+        - id у my-accordion всегда уникальный для разных блоков!!!
+        - data-parent - всегда является указателем на id того аккордиона, в котором находится!!! 
+        - aria-controls и id у my-accordion__collapse - связаны как кнопка открывающая тот контент, где совпадут эти атрибуты, поэтому у одного my-accordion__item они совпадают, НО ОНИ НЕ ДОЛЖНЫ ПОВТОРЯТСЯ НИГДЕ БОЛЬШЕ НА СТРАНИЦЕ НИ В ТОМ ЖЕ АККОРДИОНЕ, НИ В КАКОМ ЛИБО ДРУГОМ (если так не удобно скажите, по идее могу сделать по другому этот механизм) -->
+        <section class="faq section-padding">
+            <div class="my-container faq__container">
+                <h2 class="section-title faq__title">Часто задаваемые вопросы</h2>
+                <div class="my-accordion faq__accordion" id="accordion1">
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="true" aria-controls="answer-1-1">
+                                Можно ли купить полис автострахования онлайн?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-1" class="my-accordion__collapse show" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Да, вы можете оформить и купить страховой полис на нашем официальном сайте — быстро,
+                                    удобно и официально.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-2">
+                                Сколько стоит автострахование?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-2" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-3">
+                                Какие случаи покрываются автостраховкой?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-3" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Да, вы можете оформить и купить страховой полис на нашем официальном сайте — быстро,
+                                    удобно и официально.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-4">
+                                Как быстро я получу электронный полис?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-4" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-5">
+                                Можно ли оформить автострахование рядом с домом?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-5" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-6">
+                                Обязательно ли иметь страховку на машину?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-6" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-accordion__item">
+                        <h3 class="accordion-header">
+                            <button class="my-accordion__button" aria-expanded="false" aria-controls="answer-1-7">
+                                Что делать при наступлении страхового случая?
+                                <div class="my-accordion__open-icon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </button>
+                        </h3>
+                        <div id="answer-1-7" class="my-accordion__collapse" data-parent="#accordion1">
+                            <div class="my-accordion__body">
+                                <p>Цена зависит от типа полиса и характеристик автомобиля. Точную стоимость можно
+                                    рассчитать в нашем калькуляторе.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="my-button faq__button">Спросить еще</button>
+            </div>
+        </section>
+
+        <!-- блок сквозной -->
+        <section class="recommends section-padding">
+            <div class="my-container recommends__container">
+                <h2 class="section-title recommends__title">Возможно, вам будет интересно</h2>
+                <div class="recommends__items">
+                    <div class="recommends__item">
+                        <div class="recommends__item-title">Страхование <br> недвижимости и&nbsp;имущества</div>
+                        <svg class="recommends__arrow">
+                            <use href="../../assets/images/sprite.svg#icon-arrow" />
+                        </svg>
+                        <div class="recommends__icon-wrap">
+                            <img src="../../assets/images/pages/car-insurance/recommends/item-1.png" alt=""
+                                class="recommends__icon-img">
+                        </div>
+                    </div>
+                    <div class="recommends__item">
+                        <div class="recommends__item-title">Ипотечное <br> страхование</div>
+                        <svg class="recommends__arrow">
+                            <use href="../../assets/images/sprite.svg#icon-arrow" />
+                        </svg>
+                        <div class="recommends__icon-wrap">
+                            <img src="../../assets/images/pages/car-insurance/recommends/item-2.png" alt=""
+                                class="recommends__icon-img">
+                        </div>
+                    </div>
+                    <div class="recommends__item">
+                        <div class="recommends__item-title">Имущество <br> юридических <br> лиц</div>
+                        <svg class="recommends__arrow">
+                            <use href="../../assets/images/sprite.svg#icon-arrow" />
+                        </svg>
+                        <div class="recommends__icon-wrap">
+                            <img src="../../assets/images/pages/car-insurance/recommends/item-3.png" alt=""
+                                class="recommends__icon-img">
+                        </div>
+                    </div>
+                    <div class="recommends__item">
+                        <div class="recommends__item-title">Несчастный <br> случай</div>
+                        <svg class="recommends__arrow">
+                            <use href="../../assets/images/sprite.svg#icon-arrow" />
+                        </svg>
+                        <div class="recommends__icon-wrap">
+                            <img src="../../assets/images/pages/car-insurance/recommends/item-4.png" alt=""
+                                class="recommends__icon-img">
+                        </div>
+                    </div>
+                    <div class="recommends__item">
+                        <div class="recommends__item-title">Страховка <br> для путешествий</div>
+                        <svg class="recommends__arrow">
+                            <use href="../../assets/images/sprite.svg#icon-arrow" />
+                        </svg>
+                        <div class="recommends__icon-wrap">
+                            <img src="../../assets/images/pages/car-insurance/recommends/item-5.png" alt=""
+                                class="recommends__icon-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- блок сквозной -->
+        <section class="lead-section colored-block section-padding">
+            <div class="colored-block__wrapper">
+                <div class="my-container lead-section__container">
+                    <form action="" class="my-form lead-section__form">
+                        <h2 class="section-title my-form__title">Оформление полиса для&nbsp;частных лиц</h2>
+                        <p class="my-form__pre-title">Оставьте заявку, мы перезвоним в&nbsp;течение 30 минут</p>
+                        <div class="my-form__fields">
+                            <div class="my-form__input"><input type="text" class="my-input" placeholder="Ваше имя">
+                            </div>
+                            <div class="my-form__input"><input type="tel" name="input-phone" class="my-input"
+                                    placeholder="Номер телефона"></div>
+                            <div class="my-form__input"><input type="text" class="my-input" placeholder="Город"></div>
+                            <div class="my-form__input"><input type="email" class="my-input" placeholder="E-mail"></div>
+                            <button class="my-button --buttonColor-light my-form__button">Отправить заявку</button>
+                            <p class="my-form__agreement-text">Подтверждаю согласие на обработку персональных данных в
+                                соответствии с <a href="">Политикой в области обработки и защиты персональных данных</a>
+                                и <a href="">Пользовательским соглашением</a></p>
+                        </div>
+                    </form>
+                    <div class="lead-section__image-wrap">
+                        <img src="../../assets/images/pages/car-insurance/lead-section/block-img.png"
+                            alt="картинка девушка с зонтом звонит по телефону" class="lead-section__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </car-insurance>
+
+    <footer class="footer">
+        <div class="my-container footer__container">
+            <div class="footer__top">
+                <div class="footer__top-left">
+                    <a href="../../index.html" class="footer__logo-wrap">
+                        <img src="../../assets/images/white-logo.svg" alt="логотип ОСАГО-ВАО" class="footer__logo-img">
+                    </a>
+                    <nav class="footer__menu">
+                        <ul class="footer__menu-items">
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Автострахование</a></li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Страхование недвижимости
+                                    и&nbsp;имущества</a></li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Ипотечное страхование</a>
+                            </li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Имущество юридических
+                                    лиц</a></li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Несчастный случай</a>
+                            </li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Путешествия</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__top-right">
+                    <div class="footer__contacts">
+                        <div class="footer__contact-info">
+                            <div class="footer__contact-title">Режим работы:</div>
+                            <div class="footer__contact-items">
+                                <div class="footer__contact-item">
+                                    <div class="footer__work-time">
+                                        <span>ПН-ПТ</span><span>10:00-19:00</span>
+                                    </div>
+                                    <div class="footer__work-time">
+                                        <span>СБ-ВС</span><span>10:00-17:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__contact-info">
+                            <div class="footer__contact-title">Звонки на номер:</div>
+                            <div class="footer__contact-items">
+                                <div class="footer__contact-item">
+                                    <a href="tel:+79260494292" class="--linkColor-white footer__contact-phone">+7 (926)
+                                        049-42-92</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="my-button --buttonSize-small footer__button">Заявка</button>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__copyright-text">&copy; ОСАГО-ВАО, 2025</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- БИБЛИОТЕКИ -->
+    <script src="../../assets/libs/swiper/swiper-bundle.min.js"></script>
+
+
+    <!-- ОБЩИЕ СКРИПТЫ -->
+    <script src="../../assets/scripts/toggle.js"></script>
+    <script src="../../assets/scripts/my-accordion.js"></script>
+    <script src="../../assets/scripts/phone-mask.js"></script>
+    <script src="../../assets/scripts/modal.js"></script>
+
+</body>
+
+</html>
