@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./styles/components/footer.css">
     <link rel="stylesheet" href="./styles/components/my-form.css">
     <link rel="stylesheet" href="./styles/components/my-accordion.css">
+    <link rel="stylesheet" href="./styles/components/modal.css">
 
     <link rel="stylesheet" href="./styles/components/sections/lead-section.css">
     <link rel="stylesheet" href="./styles/components/sections/recommends.css">
@@ -53,7 +54,7 @@
                     <div class="header__contacts">
                         <a href="tel:+79260494292" class="header__phone --linkColor-blue">+7 (926) 049-42-92</a>
                         <button
-                            class="my-button --buttonColor-light --buttonSize-small header__top-button">Заявка</button>
+                            class="my-button --buttonColor-light --buttonSize-small header__top-button" data-modal-id="modal">Заявка</button>
                     </div>
                     <button class="burger-button" data-toggle="#header-mobile-content">
                         <span></span>
@@ -62,9 +63,36 @@
                     </button>
                 </div>
             </div>
-            <div class="header__mobile-content" data-toggle-id="header-mobile-content"></div>
+            <div class="header__mobile-content" data-toggle-id="header-mobile-content">
+
+            </div>
         </div>
     </header>
+
+    <!-- модальное окно(укажите атрибут id модальному окну и навесьте атрибут data-moda-id="#modal-id" на элемент, который откроет модальное окно) -->
+    <div class="my-modal" id="modal">
+        <div class="my-modal__container">
+            <button class="my-modal__close">&times;</button>
+            <div class="my-modal__content">
+                <form action="" class="my-form my-modal__form --bg-white">
+                    <h2 class="section-title my-form__title">Оформление <br> полиса онлайн</h2>
+                    <p class="my-form__pre-title">Ответим вам через 15 минут</p>
+                    <div class="my-form__fields">
+                        <div class="my-form__input"><input type="text" class="my-input" placeholder="Ваше имя">
+                        </div>
+                        <div class="my-form__input"><input type="tel" name="input-phone" class="my-input"
+                                placeholder="Номер телефона"></div>
+                        <div class="my-form__input"><input type="text" class="my-input" placeholder="Город"></div>
+                        <div class="my-form__input"><input type="email" class="my-input" placeholder="E-mail"></div>
+                        <button class="my-button my-form__button">Отправить заявку</button>
+                        <p class="my-form__agreement-text">Подтверждаю согласие на обработку персональных данных в
+                            соответствии с <a href="">Политикой в области обработки и защиты персональных данных</a>
+                            и <a href="">Пользовательским соглашением</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <main class="main">
         <!-- блок вроде повторяется на других страницах, вроде шаблон, поэтому стили также отдельно -->
@@ -75,13 +103,15 @@
                 </div>
                 <div class="my-container hero-section__container">
                     <h1 class="hero-section__title">Автострахование <br> в Москве</h1>
-                    <p class="standart-text hero-section__pre-title">Оформите автострахование онлайн на официальном сайте — быстро, выгодно и
+                    <p class="standart-text hero-section__pre-title">Оформите автострахование онлайн на официальном
+                        сайте — быстро, выгодно и
                         безопасно. Купить полис можно в пару кликов без визита в офис.</p>
                     <form action="" class="my-form hero-section__form">
                         <div class="my-form__fields">
                             <div class="my-form__input"><input type="text" class="my-input" placeholder="Ваше имя">
                             </div>
-                            <div class="my-form__input"><input type="text" name="input-phone" class="my-input" placeholder="Номер телефона"></div>
+                            <div class="my-form__input"><input type="text" name="input-phone" class="my-input"
+                                    placeholder="Номер телефона"></div>
                             <button class="my-button my-form__button">Отправить заявку</button>
                             <p class="my-form__agreement-text">Подтверждаю согласие на обработку персональных данных в
                                 соответствии с <a href="">Политикой в области обработки и защиты персональных данных</a>
@@ -90,13 +120,16 @@
                     </form>
                     <div class="hero-section__features">
                         <div class="hero-section__feature-item"><img
-                                src="./assets/images/pages/main/hero-section/features/image-1.svg" alt="">Лучшие цены в городе
+                                src="./assets/images/pages/main/hero-section/features/image-1.svg" alt="">Лучшие цены в
+                            городе
                         </div>
                         <div class="hero-section__feature-item"><img
-                                src="./assets/images/pages/main/hero-section/features/image-2.svg" alt="">Покупка в пару кликов
+                                src="./assets/images/pages/main/hero-section/features/image-2.svg" alt="">Покупка в пару
+                            кликов
                         </div>
                         <div class="hero-section__feature-item"><img
-                                src="./assets/images/pages/main/hero-section/features/image-3.svg" alt="">Доверие и надежность
+                                src="./assets/images/pages/main/hero-section/features/image-3.svg" alt="">Доверие и
+                            надежность
                         </div>
                     </div>
                 </div>
@@ -107,7 +140,9 @@
             <div class="my-container programs__container">
                 <div class="programs__top-desc">
                     <h2 class="section-title programs__title">Программы <br> автострахования</h2>
-                    <div class="programs__top-text"> <p class="standart-text"> Наша страховая компания предлагает оформить следующие виды автострахования:</p>
+                    <div class="programs__top-text">
+                        <p class="standart-text"> Наша страховая компания предлагает оформить следующие виды
+                            автострахования:</p>
                     </div>
                 </div>
                 <div class="programs__cards">
@@ -118,7 +153,8 @@
                             </div>
                             <div class="programs__card-desc">
                                 <h3 class="pre-title-text programs__card-pre-title">Страхование ОСАГО</h3>
-                                <p class="standart-text programs__card-text">Полис, который должен быть у каждого водителя. Оформите ОСАГО за
+                                <p class="standart-text programs__card-text">Полис, который должен быть у каждого
+                                    водителя. Оформите ОСАГО за
                                     5 минут онлайн.</p>
                             </div>
                         </div>
@@ -130,7 +166,8 @@
                             </div>
                             <div class="programs__card-desc">
                                 <h3 class="pre-title-text programs__card-pre-title">Страхование КАСКО</h3>
-                                <p class="standart-text programs__card-text">КАСКО - ваша финансовая защита при угоне, ДТП и неожиданном
+                                <p class="standart-text programs__card-text">КАСКО - ваша финансовая защита при угоне,
+                                    ДТП и неожиданном
                                     повреждении автомобиля.</p>
                             </div>
                         </div>
@@ -153,7 +190,8 @@
                             </div>
                             <div class="programs__card-desc">
                                 <h3 class="pre-title-text programs__card-pre-title">От несчастных случаев</h3>
-                                <p class="standart-text programs__card-text">Страхование от несчастных случаев водителя и пассажиров.</p>
+                                <p class="standart-text programs__card-text">Страхование от несчастных случаев водителя
+                                    и пассажиров.</p>
                             </div>
                         </div>
                     </div>
@@ -170,7 +208,8 @@
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
                                     <h3 class="services__card-title pre-title-text">Стандартный полис ОСАГО</h3>
-                                    <p class="services__card-desc standart-text">Защищает вас от расходов при нанесении ущерба третьим лицам в ДТП.</p>
+                                    <p class="services__card-desc standart-text">Защищает вас от расходов при нанесении
+                                        ущерба третьим лицам в ДТП.</p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -179,7 +218,8 @@
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
                                     <h3 class="services__card-title pre-title-text">Полис ОСАГО для такси</h3>
-                                    <p class="services__card-desc standart-text">Обязательное страхование ответственности водителей, занимающихся перевозкой пассажиров.</p>
+                                    <p class="services__card-desc standart-text">Обязательное страхование
+                                        ответственности водителей, занимающихся перевозкой пассажиров.</p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -188,7 +228,8 @@
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
                                     <h3 class="services__card-title pre-title-text">Полис ОСАГО для мотоцикла</h3>
-                                    <p class="services__card-desc standart-text">Обязательное страхование ответственности владельца мотоцикла.</p>
+                                    <p class="services__card-desc standart-text">Обязательное страхование
+                                        ответственности владельца мотоцикла.</p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -196,8 +237,10 @@
                         <div class="services__card">
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
-                                    <h3 class="services__card-title pre-title-text">Полис ОСАГО на&nbsp;3/6&nbsp;месяцев</h3>
-                                    <p class="services__card-desc standart-text">Временное ОСАГО владельцев транспортных средств. </p>
+                                    <h3 class="services__card-title pre-title-text">Полис ОСАГО на&nbsp;3/6&nbsp;месяцев
+                                    </h3>
+                                    <p class="services__card-desc standart-text">Временное ОСАГО владельцев транспортных
+                                        средств. </p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -206,7 +249,9 @@
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
                                     <h3 class="services__card-title pre-title-text">Полис ОСАГО без ограничений</h3>
-                                    <p class="services__card-desc standart-text">Полис ОСАГО без ограничений позволяет управлять автомобилем любому водителю, независимо от того, указан он в страховке или нет.</p>
+                                    <p class="services__card-desc standart-text">Полис ОСАГО без ограничений позволяет
+                                        управлять автомобилем любому водителю, независимо от того, указан он в страховке
+                                        или нет.</p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -215,7 +260,8 @@
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
                                     <h3 class="services__card-title pre-title-text">Продление <br> ОСАГО</h3>
-                                    <p class="services__card-desc standart-text">Переоформление действующего полиса ОСАГО на новый срок.</p>
+                                    <p class="services__card-desc standart-text">Переоформление действующего полиса
+                                        ОСАГО на новый срок.</p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -224,7 +270,9 @@
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
                                     <h3 class="services__card-title pre-title-text">Полное <br> КАСКО</h3>
-                                    <p class="services__card-desc standart-text">Добровольное автострахование, позволяющее застраховать автомобиль от угона, ущерба и других непредвиденных ситуаций.</p>
+                                    <p class="services__card-desc standart-text">Добровольное автострахование,
+                                        позволяющее застраховать автомобиль от угона, ущерба и других непредвиденных
+                                        ситуаций.</p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -233,7 +281,9 @@
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
                                     <h3 class="services__card-title pre-title-text">КАСКО для&nbsp;мотоцикла</h3>
-                                    <p class="services__card-desc standart-text">Добровольное страхование, защищающее мотоцикл от угона, повреждений при ДТП, стихийных бедствий, пожара, противоправных действий третьих лиц и пр.</p>
+                                    <p class="services__card-desc standart-text">Добровольное страхование, защищающее
+                                        мотоцикл от угона, повреждений при ДТП, стихийных бедствий, пожара,
+                                        противоправных действий третьих лиц и пр.</p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -242,7 +292,9 @@
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
                                     <h3 class="services__card-title pre-title-text">КАСКО <br> для&nbsp;такси</h3>
-                                    <p class="services__card-desc standart-text">Добровольное страхование, защищающее такси от угона, повреждений при ДТП, стихийных бедствий, пожара, противоправных действий третьих лиц и пр.</p>
+                                    <p class="services__card-desc standart-text">Добровольное страхование, защищающее
+                                        такси от угона, повреждений при ДТП, стихийных бедствий, пожара, противоправных
+                                        действий третьих лиц и пр.</p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -251,7 +303,9 @@
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
                                     <h3 class="services__card-title pre-title-text">Мини- <br> КАСКО</h3>
-                                    <p class="services__card-desc standart-text">Упрощённая и доступная версия классического полиса КАСКО. Такой вариант страхования покрывает ограниченное количество рисков.</p>
+                                    <p class="services__card-desc standart-text">Упрощённая и доступная версия
+                                        классического полиса КАСКО. Такой вариант страхования покрывает ограниченное
+                                        количество рисков.</p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -260,7 +314,8 @@
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
                                     <h3 class="services__card-title pre-title-text">Продление КАСКО</h3>
-                                    <p class="services__card-desc standart-text">Продление (или пролонгация) КАСКО означает оформление нового страхового периода без перерыва в защите.</p>
+                                    <p class="services__card-desc standart-text">Продление (или пролонгация) КАСКО
+                                        означает оформление нового страхового периода без перерыва в защите.</p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -269,7 +324,9 @@
                             <div class="services__card-inner">
                                 <div class="services__card-texts">
                                     <h3 class="services__card-title pre-title-text">Юрист <br> по КАСКО</h3>
-                                    <p class="services__card-desc standart-text">Часто возникают споры по занижению выплат, отказам в компенсации или затягиванию сроков. Именно в таких ситуациях нужна помощь юриста.</p>
+                                    <p class="services__card-desc standart-text">Часто возникают споры по занижению
+                                        выплат, отказам в компенсации или затягиванию сроков. Именно в таких ситуациях
+                                        нужна помощь юриста.</p>
                                 </div>
                                 <a href="" class="services__card-button --linkColor-lightBlue">Подробнее</a>
                             </div>
@@ -285,11 +342,18 @@
                 <div class="why-need__content">
                     <div class="why-need__content-text">
                         <div class="why-need__texts">
-                            <p class="standart-text why-need__text"><span class="bold-text">Автострахование</span> — это не просто формальность, а важная мера финансовой защиты на случай ДТП, угона, повреждений машины или несчастных случаев. Оформление полиса страхования автомобиля позволяет минимизировать затраты в самых разных ситуациях и защитить интересы водителя, пассажиров и третьих лиц.</p>
-                            <p class="standart-text why-need__text">На официальном сайте нашей компании вы можете купить полис автострахования онлайн в удобное время. Мы предлагаем страховые услуги рядом с вами, с прозрачными ценами, понятными условиями и оперативной поддержкой.</p>
+                            <p class="standart-text why-need__text"><span class="bold-text">Автострахование</span> — это
+                                не просто формальность, а важная мера финансовой защиты на случай ДТП, угона,
+                                повреждений машины или несчастных случаев. Оформление полиса страхования автомобиля
+                                позволяет минимизировать затраты в самых разных ситуациях и защитить интересы водителя,
+                                пассажиров и третьих лиц.</p>
+                            <p class="standart-text why-need__text">На официальном сайте нашей компании вы можете купить
+                                полис автострахования онлайн в удобное время. Мы предлагаем страховые услуги рядом с
+                                вами, с прозрачными ценами, понятными условиями и оперативной поддержкой.</p>
                         </div>
-                        <div class="why-need__video-poster-wrap">
-                            <img src="./assets/images/pages/main/why-need/image.png" alt="" class="why-need__video-poster-img">
+                        <div class="why-need__video-poster-wrap --video-poster">
+                            <img src="./assets/images/pages/main/why-need/image.png" alt=""
+                                class="why-need__video-poster-img">
                         </div>
                     </div>
                     <div class="why-need__content-action">
@@ -297,7 +361,10 @@
                             <div class="why-need__action-image-wrap">
                                 <img src="./assets/images/pages/main/why-need/palanet.svg" alt="">
                             </div>
-                            <p class="why-need__content-action-text">Оформить полис можно онлайн — это быстро, удобно и официально. Актуальные тарифы и стоимость зависят от типа машины, стажа водителя и других параметров. <span class="bold-text"> Узнайте цену сейчас и купите полис, не выходя из дома.</span></p>
+                            <p class="why-need__content-action-text">Оформить полис можно онлайн — это быстро, удобно и
+                                официально. Актуальные тарифы и стоимость зависят от типа машины, стажа водителя и
+                                других параметров. <span class="bold-text"> Узнайте цену сейчас и купите полис, не
+                                    выходя из дома.</span></p>
                             <button class="my-button --buttonColor-light why-need__button">Отправить заявку</button>
                         </div>
                     </div>
@@ -314,19 +381,22 @@
                                 <div class="why-choose-us__item-image-wrap">
                                     <img src="./assets/images/pages/main/why-choose-us/item-1.png" alt="">
                                 </div>
-                                <div class="standart-text why-choose-us__item-text">Индивидуальный подход к каждому клиенту</div>
+                                <div class="standart-text why-choose-us__item-text">Индивидуальный подход к каждому
+                                    клиенту</div>
                             </div>
                             <div class="why-choose-us__item">
                                 <div class="why-choose-us__item-image-wrap">
                                     <img src="./assets/images/pages/main/why-choose-us/item-2.png" alt="">
                                 </div>
-                                <div class="standart-text why-choose-us__item-text">Честная цена <br> и гибкие условия</div>
+                                <div class="standart-text why-choose-us__item-text">Честная цена <br> и гибкие условия
+                                </div>
                             </div>
                             <div class="why-choose-us__item">
                                 <div class="why-choose-us__item-image-wrap">
                                     <img src="./assets/images/pages/main/why-choose-us/item-3.png" alt="">
                                 </div>
-                                <div class="standart-text why-choose-us__item-text">Быстрое оформление на&nbsp;официальном сайте</div>
+                                <div class="standart-text why-choose-us__item-text">Быстрое оформление
+                                    на&nbsp;официальном сайте</div>
                             </div>
                             <div class="why-choose-us__item">
                                 <div class="why-choose-us__item-image-wrap">
@@ -338,10 +408,12 @@
                                 <div class="why-choose-us__item-image-wrap">
                                     <img src="./assets/images/pages/main/why-choose-us/item-5.png" alt="">
                                 </div>
-                                <div class="standart-text why-choose-us__item-text">Сопровождение в&nbsp;течение срока действия договора</div>
+                                <div class="standart-text why-choose-us__item-text">Сопровождение в&nbsp;течение срока
+                                    действия договора</div>
                             </div>
                         </div>
-                        <p class="standart-text why-choose-us__last-text">Выбирая надёжную страховую компанию, вы защищаете не только имущество, но и свое будущее.</p>
+                        <p class="standart-text why-choose-us__last-text">Выбирая надёжную страховую компанию, вы
+                            защищаете не только имущество, но и свое будущее.</p>
                     </div>
                 </div>
             </div>
@@ -353,19 +425,41 @@
                     <div class="doc-list__item">
                         <div class="doc-list__item-title pre-title-text">Для физических лиц:</div>
                         <ul class="doc-list__list">
-                            <li class="doc-list__list-item"> <p class="standart-text">Паспорт страхующего лица (гражданина РФ);</p></li>
-                            <li class="doc-list__list-item"> <p class="standart-text">Водительское удостоверение каждого водителя, допущенного к управлению автомобилем;</p></li>
-                            <li class="doc-list__list-item"> <p class="standart-text">Паспорт транспортного средства (ПТС) и/или свидетельство о регистрации автомобиля;</li>
-                            <li class="doc-list__list-item"> <p class="standart-text">Договор купли-продажи (если авто новое), либо иные документы, подтверждающие право владения или интерес к ТС;</p></li>
-                            <li class="doc-list__list-item"> <p class="standart-text">Документы на установленное оборудование (сигнализация, спутниковая система и т.д.) — при необходимости.</p></li>
+                            <li class="doc-list__list-item">
+                                <p class="standart-text">Паспорт страхующего лица (гражданина РФ);</p>
+                            </li>
+                            <li class="doc-list__list-item">
+                                <p class="standart-text">Водительское удостоверение каждого водителя, допущенного к
+                                    управлению автомобилем;</p>
+                            </li>
+                            <li class="doc-list__list-item">
+                                <p class="standart-text">Паспорт транспортного средства (ПТС) и/или свидетельство о
+                                    регистрации автомобиля;
+                            </li>
+                            <li class="doc-list__list-item">
+                                <p class="standart-text">Договор купли-продажи (если авто новое), либо иные документы,
+                                    подтверждающие право владения или интерес к ТС;</p>
+                            </li>
+                            <li class="doc-list__list-item">
+                                <p class="standart-text">Документы на установленное оборудование (сигнализация,
+                                    спутниковая система и т.д.) — при необходимости.</p>
+                            </li>
                         </ul>
                     </div>
                     <div class="doc-list__item">
                         <div class="doc-list__item-title pre-title-text">Для юридических лиц и ИП:</div>
                         <ul class="doc-list__list">
-                            <li class="doc-list__list-item"> <p class="standart-text"> Свидетельство о регистрации юридического лица или ИП;</p></li>
-                            <li class="doc-list__list-item"> <p class="standart-text">Документы, подтверждающие право собственности или аренду транспортного средства;</p></li>
-                            <li class="doc-list__list-item"> <p class="standart-text">Водительские удостоверения сотрудников, управляющих автомобилем.</p></li>
+                            <li class="doc-list__list-item">
+                                <p class="standart-text"> Свидетельство о регистрации юридического лица или ИП;</p>
+                            </li>
+                            <li class="doc-list__list-item">
+                                <p class="standart-text">Документы, подтверждающие право собственности или аренду
+                                    транспортного средства;</p>
+                            </li>
+                            <li class="doc-list__list-item">
+                                <p class="standart-text">Водительские удостоверения сотрудников, управляющих
+                                    автомобилем.</p>
+                            </li>
                         </ul>
                         <div class="doc-list__notify">
                             Если авто в кредите или залоге, потребуется предоставить соответствующий договор.
@@ -657,6 +751,7 @@
     <script src="./assets/scripts/toggle.js"></script>
     <script src="./assets/scripts/my-accordion.js"></script>
     <script src="./assets/scripts/phone-mask.js"></script>
+    <script src="./assets/scripts/modal.js"></script>
 
 </body>
 

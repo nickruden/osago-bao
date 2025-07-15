@@ -275,3 +275,43 @@
 .bold-text {
     font-weight: 700;
 }
+
+.--video-poster {
+    position: relative;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.--video-poster::before {
+    content: url('../assets/images/play-button.svg');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: 65px;
+    z-index: 7;
+}
+
+.--video-poster:hover {
+    filter: brightness(0.9);
+}
+
+.--video-poster:hover::before {
+    transform: translate(-50%, -50%) scale(1.05);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 551px) {
+    .--video-poster::before {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 421px) {
+    .--video-poster::before {
+        width: 30px;
+        height: 30px;
+    }
+}

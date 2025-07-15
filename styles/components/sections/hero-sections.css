@@ -26,7 +26,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(22, 36, 57, 1), rgba(22, 36, 57, 0) 91%);
+    background: linear-gradient(90deg, rgba(22, 36, 57, 1), rgba(22, 36, 57, 0) 70%);
     z-index: 1;
 }
 
@@ -46,7 +46,31 @@
     font-weight: 700;
     line-height: 100%;
     color: #FFF;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+    color: #F6FBFD;
 }
+
+/* Обрезка лишнего пространства сверху */
+.hero-section__title::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1) * 0.5em);
+    /* Подбираем коэффициент */
+}
+
+/* Обрезка снизу (если нужно) */
+.hero-section__title::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1) * 0.5em);
+}
+
 
 .hero-section__pre-title {
     color: #FFF;
@@ -54,6 +78,10 @@
 }
 
 .hero-section__form {}
+
+.hero-section__form .my-form__button {
+    margin-bottom: 15px;
+}
 
 .hero-section__features {
     display: flex;
@@ -112,10 +140,18 @@
         padding-top: 79px;
     }
 
+    .hero-section__bg-image::before {
+        background: linear-gradient(90deg, rgba(22, 36, 57, 1), rgba(22, 36, 57, 0) 85%);
+    }
+
     .hero-section__container {
         padding-top: 90px;
         padding-bottom: 60px;
         gap: 40px;
+    }
+
+    .hero-section__form .my-form__button {
+        margin-bottom: 10px;
     }
 
     .hero-section__feature-item {
@@ -145,6 +181,10 @@
 }
 
 @media (max-width: 830px) {
+    .hero-section__bg-image::before {
+        background: linear-gradient(90deg, rgba(22, 36, 57, 1), rgba(22, 36, 57, 0) 94%);
+    }
+
     .hero-section__container {
         padding-top: 85px;
         padding-bottom: 55px;
@@ -183,6 +223,10 @@
 
     .hero-section__bg-image::before {
         background: linear-gradient(90deg, rgba(22, 36, 57, 1), rgba(22, 36, 57, 0) 165%);
+    }
+
+    .hero-section__form .my-form__button {
+        margin-bottom: 10px;
     }
 
     .hero-section__features {
@@ -241,6 +285,10 @@
         font-size: 40px;
     }
 
+    .hero-section__form .my-form__button {
+        margin-bottom: 0px;
+    }
+
     .hero-section__feature-item {
         font-size: 16px;
         padding: 7.7px 26px 7.7px 26px;
@@ -257,7 +305,7 @@
     }
 
     .hero-section__container {
-        padding-top: 64px;
+        padding-top: 67px;
         padding-bottom: 40px;
         gap: 26px;
     }

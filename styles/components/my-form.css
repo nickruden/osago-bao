@@ -4,6 +4,22 @@
     gap: 40px;
 }
 
+.my-form.--bg-white .my-form__title,
+.my-form.--bg-white .my-form__pre-title,
+.my-form.--bg-white .my-form__agreement-text a {
+    color: #065BBA;
+}
+
+.my-form.--bg-white .my-form__agreement-text {
+    color: #808080;
+}
+
+.my-form.--bg-white .my-form__agreement-text a:hover,
+.my-form.--bg-white .my-form__agreement-text a:focus,
+.my-form.--bg-white .my-form__agreement-text a:active {
+    color: #064B98;
+}
+
 .my-form__title {
     max-width: 501px;
     margin-bottom: 0px;
@@ -47,6 +63,8 @@
 .my-form__input {}
 
 .my-form__button {
+    padding: 14.5px 40px;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
@@ -97,6 +115,11 @@
     .my-form__pre-title {
         font-size: 20px;
     }
+
+    .my-form__button {
+        padding: 15.5px 40px;
+        font-size: 22px;
+    }
 }
 
 @media (max-width: 1025px) {
@@ -111,11 +134,20 @@
     .my-form__pre-title {
         font-size: 18px;
     }
+
+    .my-form__button {
+        margin-bottom: 0px;
+    }
 }
 
 @media (max-width: 830px) {
     .my-form__agreement-text {
         font-size: 11px;
+    }
+
+    .my-form__button {
+        padding: 16.5px 40px;
+        font-size: 20px;
     }
 }
 
@@ -136,6 +168,10 @@
         font-size: 12px;
         max-width: none;
     }
+
+    .my-form__button {
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 581px) {
@@ -150,6 +186,8 @@
 
     .my-form__button {
         margin-bottom: 0px;
+        padding: 17.5px 40px;
+        font-size: 18px;
     }
 
     .my-form__agreement-text {

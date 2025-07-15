@@ -1,0 +1,164 @@
+.my-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 800;
+    display: none;
+    overflow-y: auto;
+    padding-top: calc(81px + 125px);
+    padding-bottom: 45px;
+}
+
+.my-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgba(9, 33, 59, 0.54);
+    padding-top: calc(81px + 45px);
+}
+
+@media (max-height: 700px) {
+    .my-modal.active {
+        align-items: flex-start;
+    }
+}
+
+.my-modal__container {
+    position: relative;
+    width: 100%;
+    max-width: 473px;
+    margin: 0 auto;
+    background-color: #FFF;
+    border-radius: 12px;
+    padding: 47px 43px;
+}
+
+.my-modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #065BBA;
+}
+
+.my-modal__content {}
+
+.my-modal__form {}
+
+.my-modal__form .my-form__button {
+    margin-bottom: 10px;
+}
+
+.my-form__title {}
+
+.my-form__pre-title {}
+
+.my-form__button {}
+
+@media (max-width: 1201px) {
+    .my-modal__form.my-form {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .my-modal.active {
+        padding-top: calc(79px + 40px);
+    }
+
+    .my-modal__container {
+        padding: 42px 38px;
+    }
+
+    .my-modal__form.my-form {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 830px) {
+    .my-modal__container {
+        padding: 39px 34px;
+    }
+
+    .my-modal__close {
+        top: 12px;
+        right: 17px;
+    }
+
+    .my-modal.active {
+        padding-top: calc(79px + 35px);
+    }
+}
+
+@media (max-width: 769px) {
+    .my-modal__container {
+        border-radius: 7px;
+    }
+
+    .my-modal.active {
+        padding-top: calc(62px + 30px);
+    }
+
+    .my-modal {
+        padding-bottom: 55px;
+    }
+}
+
+@media (max-width: 581px) {
+    .my-modal__container {
+        border-radius: 6px;
+        padding: 35px 28px;
+    }
+
+    .my-modal__close {
+        top: 10px;
+        right: 15px;
+        font-size: 25px;
+    }
+
+    .my-modal__form .my-form__title {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 520px) {
+    .my-modal__container {
+        max-width: none;
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 421px) {
+    .my-modal.active {
+        padding-top: calc(53px + 30px);
+    }
+
+    .my-modal__container {
+        padding: calc(30px + 10px) 20px 30px 20px;
+    }
+
+    .my-modal__form.my-form {
+        gap: 20px;
+    }
+
+    .my-modal__form .my-form__pre-title {
+        line-height: 1.3;
+    }
+
+    /* Обрезка лишнего пространства сверху */
+    .my-modal__form .my-form__pre-title::before {
+        margin-top: calc((0.72 - 1.3) * 0.5em);
+        /* Подбираем коэффициент */
+    }
+
+    /* Обрезка снизу (если нужно) */
+    .my-modal__form .my-form__pre-title::after {
+        margin-bottom: calc((0.72 - 1.3) * 0.5em);
+    }
+}
