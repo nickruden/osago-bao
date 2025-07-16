@@ -1,0 +1,14 @@
+.my-dropdown {
+    display: flex;
+    flex-direction: column;
+}
+.my-dropdown-toggle {
+    cursor: pointer;
+}
+.my-dropdown-list {
+    display: none;
+}
+.my-dropdown-list__item {
+}
+.my-dropdown-list__item-link {
+}

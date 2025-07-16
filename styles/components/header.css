@@ -1,9 +1,25 @@
 .header {
+    position: relative;
+}
+
+.header.mobile-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(9, 33, 59, 0.54);
+    z-index: 900;
+    pointer-events: none;
+}
+
+.header__wrapper {
     padding: 20px 0px;
     position: fixed;
     width: 100%;
     background-color: #FFF;
-    z-index: 999;
+    z-index: 1000;
 }
 
 .header__container {}
@@ -90,15 +106,265 @@
     transform: translateY(-8px) rotate(-45deg);
 }
 
-.header__mobile-content {
+.header__mobile-menu {
     display: none;
+    position: fixed;
+    top: 62px;
+    right: 0;
+    width: 100%;
+    max-width: none;
+    background-color: #FFF;
+    z-index: 950;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
 }
 
-.header__mobile-content.opened {
+.header__mobile-menu.opened {
+    display: flex;
+    height: 100%;
+    transform: translateX(0);
+}
+
+.mobile-menu {
+    padding: 37px 33px 90px 33px;
+    flex-direction: column;
+}
+
+.mobile-menu__inner {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 47px;
+    min-height: min-content;
+}
+
+.mobile-menu__my-dropdown {
+    margin-bottom: 23px;
+}
+
+.mobile-menu__my-dropdown-toggle {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #065BBA;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+}
+
+/* Обрезка лишнего пространства сверху */
+.mobile-menu__my-dropdown-toggle::before {
+    content: '';
     display: block;
-    background-color: green;
-    height: 100vh;
-    margin-top: 20px;
+    height: 0;
+    margin-top: calc((0.72 - 1.2) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.mobile-menu__my-dropdown-toggle::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.2) * 0.5em);
+}
+
+.mobile-menu__my-dropdown-list {
+    padding-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.mobile-menu__my-dropdown-list-item {
+    text-align: center;
+    line-height: 0.7;
+}
+
+.mobile-menu__my-dropdown-list-item-link {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #065BBA;
+    text-align: center;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+}
+
+/* Обрезка лишнего пространства сверху */
+.mobile-menu__my-dropdown-list-item-link::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1.2) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.mobile-menu__my-dropdown-list-item-link::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.2) * 0.5em);
+}
+
+.mobile-menu__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.mobile-menu__contacts-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #065BBA;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+}
+
+/* Обрезка лишнего пространства сверху */
+.mobile-menu__contacts-title::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1.2) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.mobile-menu__contacts-title::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.2) * 0.5em);
+}
+
+.mobile-menu__contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.mobile-menu__contact-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.58;
+    color: #065BBA;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+}
+
+/* Обрезка лишнего пространства сверху */
+.mobile-menu__contact-title::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1.58) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.mobile-menu__contact-title::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.58) * 0.5em);
+}
+
+.mobile-menu__contact-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.mobile-menu__contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.mobile-menu__work-time {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #065BBA;
+    display: flex;
+    gap: 10px;
+    max-height: 11px;
+}
+
+.mobile-menu__work-time span {
+    display: block;
+    max-height: 11px;
+}
+
+.mobile-menu__contact-phone {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.58;
+    color: #065BBA;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+}
+
+/* Обрезка лишнего пространства сверху */
+.mobile-menu__contact-phone::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1.58) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.mobile-menu__contact-phone::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.58) * 0.5em);
+}
+
+.mobile-menu__footer {
+    margin-top: auto;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #065BBA;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+}
+
+/* Обрезка лишнего пространства сверху */
+.mobile-menu__footer::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1.4) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.mobile-menu__footer::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.4) * 0.5em);
 }
 
 @media (max-width: 1201px) {}
@@ -141,7 +407,7 @@
 }
 
 @media (max-width: 421px) {
-    .header {
+    .header__wrapper {
         padding: 18px 0px;
     }
 
@@ -160,6 +426,14 @@
 
     .burger-button.active span:nth-child(3) {
         transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    .header__mobile-menu {
+        top: 53px;
+    }
+
+    .mobile-menu {
+        padding: 37px 33px 90px 33px;
     }
 
 }
