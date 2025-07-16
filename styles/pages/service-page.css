@@ -938,34 +938,248 @@
 
 
 /* Как возместить убытки */
-.return-loss {
-}
-.return-loss__container {
-}
+.return-loss {}
+
+.return-loss__container {}
+
 .return-loss__title {
     margin-bottom: 40px;
 }
+
 .return-loss__pre-title {
+    color: #065BBA;
+    font-weight: 700;
     margin-bottom: 40px;
+    line-height: 1.4;
 }
+
+/* Обрезка лишнего пространства сверху */
+.standart-text::before,
+.standart-text *:not(.bold-text)::before {
+    margin-top: calc((0.72 - 1.4) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.standart-text::after,
+.standart-text *:not(.bold-text)::after {
+    margin-bottom: calc((0.72 - 1.4) * 0.5em);
+}
+
 .return-loss__cards {
     margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: stretch;
 }
+
 .return-loss__card {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #ffffff00, #065BBA, #226FC6, #ffffff00);
+    height: 100%;
 }
+
 .return-loss__card-top {
+    flex-grow: 1;
+    padding: 40px 30px;
+    color: #FFF;
+    background: linear-gradient(114deg, #307ACC, #065BBA, #226FC6);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 12px 12px 0px 0px;
+    overflow: hidden;
 }
-.return-loss__card-title {
+
+.return-loss__card-title {}
+
+.return-loss__card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    list-style-type: circle;
 }
-.return-loss__list {
+
+.return-loss__card-list-item {
+    line-height: 0.7;
+    max-width: 316px;
+    display: flex;
 }
+
+.return-loss__card-list-item::before {
+    content: "•";
+    color: #FFF;
+    margin-right: 8px;
+}
+
 .return-loss__card-botton {
+    flex-grow: 1;
+    padding: 30px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(144, 195, 243, 0.34);
+    overflow: hidden;
 }
+
 .return-loss__card-bottom-text {
+    max-width: 307px;
 }
+
 .return-loss__button {
     max-width: 273px;
     margin: 0 auto;
+}
+
+@media (max-width: 1201px) {
+    .return-loss__title {
+        margin-bottom: 35px;
+    }
+
+    .return-loss__pre-title {
+        margin-bottom: 35px;
+    }
+
+    .return-loss__cards {
+        margin-bottom: 45px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .return-loss__card-top {
+        padding: 25px 20px;
+        gap: 25px;
+    }
+
+    .return-loss__card-list {
+        gap: 22px;
+    }
+
+    .return-loss__card-botton {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 830px) {
+    .return-loss__title {
+        margin-bottom: 32px;
+    }
+
+    .return-loss__pre-title {
+        margin-bottom: 32px;
+    }
+
+    .return-loss__cards {
+        margin-bottom: 32px;
+        gap: 25px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .return-loss__card-top {
+        padding: 30px 25px;
+        gap: 30px;
+    }
+
+    .return-loss__card-list-item {
+        max-width: 520px;
+    }
+
+    .return-loss__card-botton {
+        padding: 25px;
+    }
+
+    .return-loss__card-bottom-text {
+        max-width: 520px;
+    }
+}
+
+@media (max-width: 769px) {
+    .return-loss__cards {
+        margin-bottom: 32px;
+        gap: 20px;
+    }
+
+    .return-loss__card-list {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 581px) {
+    .return-loss__title {
+        margin-bottom: 28px;
+    }
+
+    .return-loss__pre-title {
+        margin-bottom: 28px;
+    }
+
+    .return-loss__cards {
+        margin-bottom: 28px;
+        gap: 17px;
+    }
+
+    .return-loss__card-top {
+        padding: 28px 17px 28px 22px;
+        gap: 28px;
+    }
+
+    .return-loss__card-list {
+        gap: 15px;
+    }
+
+    .return-loss__card-botton {
+        padding: 25px 22px;
+    }
+
+    .return-loss__button {
+        max-width: none;
+    }
+}
+
+@media (max-width: 421px) {
+    .return-loss__title {
+        margin-bottom: 24px;
+    }
+
+    .return-loss__pre-title {
+        margin-bottom: 24px;
+        font-size: 12px;
+    }
+
+    .return-loss__cards {
+        margin-bottom: 24px;
+        gap: 14px;
+    }
+
+    .return-loss__card-top {
+        padding: 26px 17px 24px 22px;
+        gap: 24px;
+    }
+
+    .return-loss__card-title {
+        line-height: 1.4;
+    }
+
+    /* Обрезка лишнего пространства сверху */
+    .standart-text::before,
+    .standart-text *:not(.bold-text)::before {
+        margin-top: calc((0.72 - 1.4) * 0.5em);
+    }
+
+    /* Обрезка снизу (если нужно) */
+    .standart-text::after,
+    .standart-text *:not(.bold-text)::after {
+        margin-bottom: calc((0.72 - 1.4) * 0.5em);
+    }
+
+    .return-loss__card-list {
+        gap: 8px;
+    }
+
+    .return-loss__card-botton {
+        padding: 24px 22px;
+    }
 }
 
 

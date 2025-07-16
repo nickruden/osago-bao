@@ -416,12 +416,12 @@
                     <div class="return-loss__card">
                         <div class="return-loss__card-top">
                             <h3 class="pre-title-text return-loss__card-title">Ситуация 1.</h3>
-                            <ul class="return-loss__list">
-                                <li class="return-loss__list">
+                            <ul class="return-loss__card-list">
+                                <li class="return-loss__card-list-item">
                                     <p class="standart-text">В ДТП пострадали 2 и более автомобиля (другое имущество не
                                         повреждено и нет вреда здоровью и жизни людей)</p>
                                 </li>
-                                <li class="return-loss__list">
+                                <li class="return-loss__card-list-item">
                                     <p class="standart-text">У виновника ДТП есть ОСАГО</p>
                                 </li>
                             </ul>
@@ -435,41 +435,33 @@
                     </div>
                     <div class="return-loss__card">
                         <div class="return-loss__card-top">
-                            <h3 class="pre-title-text return-loss__card-title">Ситуация 1.</h3>
-                            <ul class="return-loss__list">
-                                <li class="return-loss__list">
-                                    <p class="standart-text">В ДТП пострадали 2 и более автомобиля (другое имущество не
-                                        повреждено и нет вреда здоровью и жизни людей)</p>
-                                </li>
-                                <li class="return-loss__list">
-                                    <p class="standart-text">У виновника ДТП есть ОСАГО</p>
+                            <h3 class="pre-title-text return-loss__card-title">Ситуация 2.</h3>
+                            <ul class="return-loss__card-list">
+                                <li class="return-loss__card-list-item">
+                                    <p class="standart-text">Кроме автомобилей пострадали люди или другое имущество</p>
                                 </li>
                             </ul>
                         </div>
                         <div class="return-loss__card-botton">
                             <p class="standart-text return-loss__card-bottom-text">
-                                Вам следует обратиться за возмещением в свою страховую. Рекомендуем сделать это как
-                                можно быстрее — в течение нескольких дней после происшествия.
+                                За возмещением вы должны обратиться в страховую виновника
                             </p>
                         </div>
                     </div>
                     <div class="return-loss__card">
                         <div class="return-loss__card-top">
-                            <h3 class="pre-title-text return-loss__card-title">Ситуация 1.</h3>
-                            <ul class="return-loss__list">
-                                <li class="return-loss__list">
-                                    <p class="standart-text">В ДТП пострадали 2 и более автомобиля (другое имущество не
-                                        повреждено и нет вреда здоровью и жизни людей)</p>
-                                </li>
-                                <li class="return-loss__list">
-                                    <p class="standart-text">У виновника ДТП есть ОСАГО</p>
+                            <h3 class="pre-title-text return-loss__card-title">Ситуация 3.</h3>
+                            <ul class="return-loss__card-list">
+                                <li class="return-loss__card-list-item">
+                                    <p class="standart-text">Если у виновника нет ОСАГО</p>
                                 </li>
                             </ul>
                         </div>
                         <div class="return-loss__card-botton">
                             <p class="standart-text return-loss__card-bottom-text">
-                                Вам следует обратиться за возмещением в свою страховую. Рекомендуем сделать это как
-                                можно быстрее — в течение нескольких дней после происшествия.
+                                Если причинен вред жизни и здоровью, вы имеете право обратиться в РСА за компенсационной
+                                выплатой; если причинен вред имуществу - вы вправе обратиться к виновнику в досудебном
+                                или судебном порядке.
                             </p>
                         </div>
                     </div>
@@ -477,7 +469,6 @@
                 <button class="my-button return-loss__button">Обратиться к нам</button>
             </div>
         </section>
-
         <section class="order-actions section-padding colored-block">
             <div class="colored-block__wrapper">
                 <div class="my-container order-actions__container">
@@ -915,6 +906,7 @@
         <script src="../../assets/scripts/modal.js"></script>
 
 
+
         <!-- слайдер приобретённых полисов -->
         <script>
             const swiper = new Swiper('.sold-services__swiper', {
@@ -939,6 +931,40 @@
                 }
             });
         </script>
+
+        <!-- скрипт для работы блока Как возместить убытки -->
+        <script>
+    function equalizeReturnLossCardHeights() {
+        // Проверка ширины окна
+        if (window.innerWidth < 831) {
+            // Если ширина больше — сброс высот (на всякий случай)
+            document.querySelectorAll('.return-loss__card-top').forEach(el => el.style.height = 'auto');
+            document.querySelectorAll('.return-loss__card-botton').forEach(el => el.style.height = 'auto');
+            return;
+        }
+
+        const tops = document.querySelectorAll('.return-loss__card-top');
+        const bottoms = document.querySelectorAll('.return-loss__card-botton');
+
+        // Сброс высот
+        tops.forEach(el => el.style.height = 'auto');
+        bottoms.forEach(el => el.style.height = 'auto');
+
+        // Вычисление максимальных высот
+        const maxTop = Math.max(...Array.from(tops, el => el.scrollHeight));
+        const maxBottom = Math.max(...Array.from(bottoms, el => el.scrollHeight));
+
+        // Установка
+        tops.forEach(el => el.style.height = maxTop + 'px');
+        bottoms.forEach(el => el.style.height = maxBottom + 'px');
+    }
+
+    window.addEventListener('load', equalizeReturnLossCardHeights);
+    window.addEventListener('resize', equalizeReturnLossCardHeights);
+</script>
+
+
+
 </body>
 
 </html>
