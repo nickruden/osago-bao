@@ -218,6 +218,20 @@ p.review-card__text {
         max-width: 50px;
     }
 
+    .review-card__name {
+        line-height: 1.2;
+    }
+
+    /* Обрезка лишнего пространства сверху */
+    .review-card__name::before {
+        margin-top: calc((0.72 - 1.2) * 0.5em);
+    }
+
+    /* Обрезка снизу (если нужно) */
+    .review-card__name::after {
+        margin-bottom: calc((0.72 - 1.2) * 0.5em);
+    }
+
     .review-card__stars {
         max-width: 98px;
     }
