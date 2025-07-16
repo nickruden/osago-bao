@@ -110,6 +110,9 @@ button {
     padding: 0px 30px;
     box-sizing: content-box;
 }
+.my-container iframe {
+    min-width: 0px!important;
+}
 
 @media (max-width: 769px) {
     .my-container {
