@@ -149,27 +149,6 @@
     font-weight: 700;
     line-height: 1.2;
     color: #065BBA;
-    /* Сохраняем интервал между строками */
-    display: inline-block;
-    vertical-align: top;
-    /* Убираем зазор снизу */
-    position: relative;
-}
-
-/* Обрезка лишнего пространства сверху */
-.mobile-menu__my-dropdown-toggle::before {
-    content: '';
-    display: block;
-    height: 0;
-    margin-top: calc((0.72 - 1.2) * 0.5em);
-}
-
-/* Обрезка снизу (если нужно) */
-.mobile-menu__my-dropdown-toggle::after {
-    content: '';
-    display: block;
-    height: 0;
-    margin-bottom: calc((0.72 - 1.2) * 0.5em);
 }
 
 .mobile-menu__my-dropdown-list {
