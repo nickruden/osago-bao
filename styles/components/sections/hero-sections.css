@@ -16,7 +16,6 @@
 
 .hero-section__bg-image img {
     object-position: center;
-    /* Центрирует обрезку */
 }
 
 .hero-section__bg-image::before {
@@ -51,7 +50,6 @@
     vertical-align: top;
     /* Убираем зазор снизу */
     position: relative;
-    color: #F6FBFD;
 }
 
 /* Обрезка лишнего пространства сверху */
