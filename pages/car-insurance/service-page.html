@@ -37,34 +37,97 @@
 
 <body>
     <header class="header">
-        <div class="my-container header__container">
-            <div class="header__top-content">
-                <div class="header__left-top">
-                    <a href="../../index.html" class="header__logo-wrap">
-                        <img src="../../assets/images/blue-logo.svg" alt="логотип ОСАГО-ВАО" class="header__logo-img">
-                    </a>
-                    <nav class="header__menu">
-                        <ul class="header__menu-items">
-                            <li class="header__menu-item"><a href="" class="header__menu-link">Категории</a></li>
-                            <li class="header__menu-item"><a href="" class="header__menu-link">Контакты</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="header__top-right">
-                    <div class="header__contacts">
-                        <a href="tel:+79260494292" class="header__phone --linkColor-blue">+7 (926) 049-42-92</a>
-                        <button class="my-button --buttonColor-light --buttonSize-small header__top-button"
-                            data-modal-id="modal">Заявка</button>
+        <div class="header__wrapper">
+            <div class="my-container header__container">
+                <div class="header__top-content">
+                    <div class="header__left-top">
+                        <a href="../../index.html" class="header__logo-wrap">
+                            <img src="../../assets/images/blue-logo.svg" alt="логотип ОСАГО-ВАО" class="header__logo-img">
+                        </a>
+                        <nav class="header__menu">
+                            <ul class="header__menu-items">
+                                <li class="header__menu-item"><a href="" class="header__menu-link">Категории</a></li>
+                                <li class="header__menu-item"><a href="" class="header__menu-link">Контакты</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <button class="burger-button" data-toggle="#header-mobile-content">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                    <div class="header__top-right">
+                        <div class="header__contacts">
+                            <a href="tel:+79260494292" class="header__phone --linkColor-blue">+7 (926) 049-42-92</a>
+                            <button class="my-button --buttonColor-light --buttonSize-small header__top-button"
+                                data-modal-id="modal">Заявка</button>
+                        </div>
+                        <button class="burger-button" data-burger-toggle="#header-mobile-content">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="header__mobile-content" data-toggle-id="header-mobile-content">
-
+                <div class="header__mobile-menu mobile-menu" data-mobile-menu-id="header-mobile-content">
+                    <div class="mobile-menu__inner">
+                        <div class="my-dropdown mobile-menu__my-dropdown">
+                            <button class="my-dropdown-toggle mobile-menu__my-dropdown-toggle">Категории услуг</button>
+                            <ul class="my-dropdown-list mobile-menu__my-dropdown-list">
+                                <li class="my-dropdown-list__item mobile-menu__my-dropdown-list-item">
+                                    <a href="#"
+                                        class="my-dropdown-list__item-link mobile-menu__my-dropdown-list-item-link">Автострахование</a>
+                                </li>
+                                <li class="my-dropdown-list__item mobile-menu__my-dropdown-list-item">
+                                    <a href="#"
+                                        class="my-dropdown-list__item-link mobile-menu__my-dropdown-list-item-link">Страхование
+                                        недвижимости и имущества</a>
+                                </li>
+                                <li class="my-dropdown-list__item mobile-menu__my-dropdown-list-item">
+                                    <a href="#"
+                                        class="my-dropdown-list__item-link mobile-menu__my-dropdown-list-item-link">Ипотечное
+                                        страхование</a>
+                                </li>
+                                <li class="my-dropdown-list__item mobile-menu__my-dropdown-list-item">
+                                    <a href="#"
+                                        class="my-dropdown-list__item-link mobile-menu__my-dropdown-list-item-link">Имущество
+                                        юридических лиц</a>
+                                </li>
+                                <li class="my-dropdown-list__item mobile-menu__my-dropdown-list-item">
+                                    <a href="#"
+                                        class="my-dropdown-list__item-link mobile-menu__my-dropdown-list-item-link">Несчастный
+                                        случай</a>
+                                </li>
+                                <li class="my-dropdown-list__item mobile-menu__my-dropdown-list-item">
+                                    <a href="#"
+                                        class="my-dropdown-list__item-link mobile-menu__my-dropdown-list-item-link">Путешествия</a>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="mobile-menu__contacts">
+                            <h3 class="mobile-menu__contacts-title">Контакты</h3>
+                            <div class="mobile-menu__contact-info">
+                                <div class="mobile-menu__contact-title">Звонки на номер:</div>
+                                <div class="mobile-menu__contact-items">
+                                    <div class="mobile-menu__contact-item">
+                                        <a href="tel:+79260494292" class="mobile-menu__contact-phone">+7 (926) 049-42-92</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-menu__contact-info">
+                                <div class="mobile-menu__contact-title">Режим работы:</div>
+                                <div class="mobile-menu__contact-items">
+                                    <div class="mobile-menu__contact-item">
+                                        <div class="mobile-menu__work-time">
+                                            <span>ПН-ПТ</span><span>10:00-19:00</span>
+                                        </div>
+                                        <div class="mobile-menu__work-time">
+                                            <span>СБ-ВС</span><span>10:00-17:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <footer class="mobile-menu__footer">&copy; ОСАГО-ВАО, 2025</footer>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
