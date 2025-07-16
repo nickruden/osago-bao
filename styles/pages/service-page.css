@@ -382,17 +382,193 @@
 }
 
 
-/* Бланки для скачивания */
-.download-docs {
+/* Порядок действий при страховом случае */
+.order-actions {}
+
+.colored-block__wrapper {
+    padding-top: 70px;
+    padding-bottom: 72px;
 }
+
+.order-actions__container {}
+
+.order-actions__title {}
+
+.order-actions__items {
+    display: flex;
+    gap: 50px;
+}
+
+.order-actions__item-step {
+    flex: 1 1 calc(33.333% - 50px);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.order-actions__step-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 116px;
+    max-width: 116px;
+    width: 100%;
+    color: #FFF;
+    line-height: 1.1;
+    background: #065BBA;
+    box-shadow: 0px 8px 20px rgba(144, 195, 243, 0.14);
+    border-radius: 50%;
+}
+
+/* Обрезка лишнего пространства сверху */
+.pre-title-text::before {
+    margin-top: calc((0.72 - 1.1) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.pre-title-text::after {
+    margin-bottom: calc((0.72 - 1.1) * 0.5em);
+}
+
+.order-actions__step-text {
+    max-width: 232px;
+    color: #FFF;
+}
+
+@media (max-width: 1201px) {
+    .order-actions__items {
+        gap: 30px;
+    }
+
+    .order-actions__item-step {
+        flex: 1 1 calc(33.333% - 30px);
+        gap: 15px;
+    }
+
+    .order-actions__step-name {
+        height: 106px;
+        max-width: 106px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .colored-block__wrapper {
+        padding-top: 60px;
+        padding-bottom: 62px;
+    }
+
+    .order-actions__items {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .order-actions__item-step {
+        flex: 0 0 calc(50% - 30px);
+        gap: 20px;
+    }
+
+    .order-actions__step-text {
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 830px) {
+    .colored-block__wrapper {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 769px) {
+    .order-actions__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order-actions__title {
+        text-align: center;
+    }
+
+    .order-actions__items {
+        gap: 30px;
+    }
+
+    .order-actions__item-step {
+        flex: 0 0 100%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .order-actions__step-text {
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 581px) {
+    .colored-block__wrapper {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
+
+    .order-actions__container {
+        align-items: flex-start;
+    }
+
+    .order-actions__title {
+        text-align: start;
+    }
+
+    .order-actions__items {
+        gap: 21px;
+    }
+
+    .order-actions__item-step {
+        gap: 18px;
+        justify-content: flex-start;
+    }
+
+    .order-actions__step-name {
+        height: 90px;
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 421px) {
+    .colored-block__wrapper {
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+
+    .order-actions__items {
+        gap: 18px;
+    }
+
+    .order-actions__item-step {
+        gap: 15px;
+    }
+
+    .order-actions__step-name {
+        height: 80px;
+        max-width: 80px;
+    }
+}
+
+
+/* Бланки для скачивания */
+.download-docs {}
+
 .download-docs__container {
     display: flex;
     justify-content: space-between;
     gap: 80px;
 }
+
 .download-docs__title {
     max-width: 407px;
 }
+
 .download-docs__links {
     display: flex;
     flex-direction: column;
@@ -400,6 +576,7 @@
     max-width: 683px;
     width: 100%;
 }
+
 .download-docs__link {
     padding: 32px 32px 31px;
     background-color: #FFF;
@@ -407,16 +584,18 @@
     display: flex;
     align-items: center;
     gap: 31px;
-    border-radius: 6px; 
+    border-radius: 6px;
 }
+
 .download-docs__link-img {
     max-width: 54px;
     max-height: 73px;
 }
+
 .download-docs__link-text {
     text-decoration: underline;
     color: #065BBA;
-line-height: 1.1;
+    line-height: 1.1;
 }
 
 /* Обрезка лишнего пространства сверху */
@@ -432,32 +611,35 @@ line-height: 1.1;
 .download-docs__link:hover {
     box-shadow: 0px 4px 20px 0px rgba(121, 163, 202, 0.34);
 }
+
 .download-docs__link:hover .download-docs__link-text {
     color: #064B98;
 }
 
 @media (max-width: 1201px) {
-.download-docs__link-img {
-    max-width: 50px;
-    max-height: 67px;
-}
+    .download-docs__link-img {
+        max-width: 50px;
+        max-height: 67px;
+    }
 }
 
 @media (max-width: 1025px) {
-.download-docs__link {
-    padding: 28px;
-    gap: 26px;
-}
+    .download-docs__link {
+        padding: 28px;
+        gap: 26px;
+    }
 }
 
 @media (max-width: 830px) {
     .download-docs__links {
-    gap: 15px;
-}
+        gap: 15px;
+    }
+
     .download-docs__link {
         padding: 25px;
         gap: 24px;
-}
+    }
+
     .download-docs__link-img {
         max-width: 45px;
         max-height: 60px;
@@ -465,23 +647,26 @@ line-height: 1.1;
 }
 
 @media (max-width: 769px) {
-            .download-docs__links {
-    gap: 12px;
-}
-.download-docs__container {
-    flex-direction: column;
-    gap: 0px;
-}
+    .download-docs__links {
+        gap: 12px;
+    }
+
+    .download-docs__container {
+        flex-direction: column;
+        gap: 0px;
+    }
 }
 
 @media (max-width: 581px) {
-        .download-docs__links {
-    gap: 10px;
-}
+    .download-docs__links {
+        gap: 10px;
+    }
+
     .download-docs__link {
         padding: 20px;
         gap: 22px;
-}
+    }
+
     .download-docs__link-img {
         max-width: 40px;
         max-height: 60px;
@@ -489,13 +674,15 @@ line-height: 1.1;
 }
 
 @media (max-width: 421px) {
-            .download-docs__links {
-    gap: 8px;
-}
+    .download-docs__links {
+        gap: 8px;
+    }
+
     .download-docs__link {
         padding: 18px;
         gap: 22px;
-}
+    }
+
     .download-docs__link-img {
         max-width: 36px;
         max-height: 60px;
