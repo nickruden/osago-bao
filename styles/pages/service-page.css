@@ -382,6 +382,108 @@
 }
 
 
+/* Что такое полис осаго */
+.what-is-it {
+}
+.what-is-it__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.what-is-it__container > * {
+    flex: 1 1 calc(50% - 24px);
+}
+.what-is-it__body {
+    max-width: 580px;
+}
+.what-is-it__title {
+}
+.what-is-it__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.what-is-it__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.what-is-it__text-title {
+    color: #065BBA;
+}
+.what-is-it__text {
+}
+.what-is-it__image-wrap {
+    max-width: 580px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.what-is-it__img {
+}
+
+@media (max-width: 1201px) {
+}
+
+@media (max-width: 1025px) {
+        .what-is-it__texts {
+    gap: 28px;
+}
+.what-is-it__text-block {
+    gap: 28px;
+}
+}
+
+@media (max-width: 830px) {
+
+}
+
+@media (max-width: 769px) {
+    .what-is-it__container {
+    flex-direction: column;
+    gap: 30px;
+}
+    .what-is-it__container > * {
+    flex: auto;
+}
+.what-is-it__body {
+    max-width: none;
+}
+.what-is-it__image-wrap {
+    max-width: none;
+}
+    .what-is-it__texts {
+    gap: 30px;
+}
+.what-is-it__text-block {
+    gap: 30px;
+}
+}
+
+@media (max-width: 581px) {
+        .what-is-it__container {
+    gap: 28px;
+}
+    .what-is-it__texts {
+    gap: 28px;
+}
+.what-is-it__text-block {
+    gap: 28px;
+}
+}
+
+@media (max-width: 421px) {
+            .what-is-it__container {
+    gap: 24px;
+}
+    .what-is-it__texts {
+    gap: 24px;
+}
+.what-is-it__text-block {
+    gap: 24px;
+}
+}
+
+
 /* Порядок действий при страховом случае */
 .order-actions {}
 
