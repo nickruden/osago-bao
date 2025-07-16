@@ -152,6 +152,12 @@
     transition: color 0.3s ease;
 }
 
+.mobile-menu__my-dropdown-toggle:hover,
+.mobile-menu__my-dropdown-toggle:focus,
+.mobile-menu__my-dropdown-toggle:active {
+    color: #064B98;
+}
+
 .mobile-menu__my-dropdown-list {
     padding-top: 40px;
     flex-direction: column;
