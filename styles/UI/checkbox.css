@@ -1,0 +1,111 @@
+.my-checkbox {
+    display: flex;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.my-checkbox__old {
+    display: none;
+}
+
+.my-checkbox__new {
+    display: inline-block;
+    height: 16px;
+    max-width: 16px;
+    width: 100%;
+    border: 1px solid #FFF;
+    position: relative;
+    border-radius: 4px;
+}
+
+.my-checkbox__old:checked+.my-checkbox__new::before {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    font-size: 13px;
+}
+
+.my-checkbox__old:checked+.my-checkbox__new {
+    border: 1px solid #0F97BC;
+    background: #0F97BC;
+}
+
+.my-checkbox__text {
+    font-size: 12px;
+    line-height: 1.4;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+    color: #F6FBFD;
+}
+
+/* Обрезка лишнего пространства сверху */
+.my-checkbox__text::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1.4) * 0.5em);
+    /* Подбираем коэффициент */
+}
+
+/* Обрезка снизу (если нужно) */
+.my-checkbox__text::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.4) * 0.5em);
+}
+
+.my-checkbox__text a {
+    color: #7AD4F8;
+}
+
+.my-checkbox__text a:hover,
+.my-checkbox__text a:focus,
+.my-checkbox__text a:active {
+    color: #6cbbda;
+}
+
+@media (max-width: 1201px) {}
+
+@media (max-width: 1025px) {}
+
+@media (max-width: 830px) {
+    .my-checkbox__text {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 769px) {
+    .my-checkbox__text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 581px) {
+    .my-checkbox__text {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 421px) {
+    .my-checkbox__text {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    /* Обрезка лишнего пространства сверху */
+    .my-checkbox__text::before {
+        margin-top: calc((0.72 - 1.6) * 0.5em);
+    }
+
+    /* Обрезка снизу (если нужно) */
+    .my-checkbox__text::after {
+        margin-bottom: calc((0.72 - 1.6) * 0.5em);
+    }
+}

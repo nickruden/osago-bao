@@ -6,18 +6,22 @@
 
 .my-form.--bg-white .my-form__title,
 .my-form.--bg-white .my-form__pre-title,
-.my-form.--bg-white .my-form__agreement-text a {
+.my-form.--bg-white .my-checkbox__text a {
     color: #065BBA;
 }
 
-.my-form.--bg-white .my-form__agreement-text {
+.my-form.--bg-white .my-checkbox__text {
     color: #808080;
 }
 
-.my-form.--bg-white .my-form__agreement-text a:hover,
-.my-form.--bg-white .my-form__agreement-text a:focus,
-.my-form.--bg-white .my-form__agreement-text a:active {
+.my-form.--bg-white .my-checkbox__text a:hover,
+.my-form.--bg-white .my-checkbox__text a:focus,
+.my-form.--bg-white .my-checkbox__text a:active {
     color: #064B98;
+}
+
+.my-form.--bg-white .my-checkbox__new {
+    border: 1px solid #0F97BC;
 }
 
 .my-form__title {
@@ -66,45 +70,6 @@
     padding: 14.5px 40px;
     font-size: 24px;
     margin-bottom: 10px;
-}
-
-.my-form__agreement-text {
-    max-width: 386px;
-    font-size: 12px;
-    line-height: 1.4;
-    /* Сохраняем интервал между строками */
-    display: inline-block;
-    vertical-align: top;
-    /* Убираем зазор снизу */
-    position: relative;
-    color: #F6FBFD;
-}
-
-/* Обрезка лишнего пространства сверху */
-.my-form__agreement-text::before {
-    content: '';
-    display: block;
-    height: 0;
-    margin-top: calc((0.72 - 1.4) * 0.5em);
-    /* Подбираем коэффициент */
-}
-
-/* Обрезка снизу (если нужно) */
-.my-form__agreement-text::after {
-    content: '';
-    display: block;
-    height: 0;
-    margin-bottom: calc((0.72 - 1.4) * 0.5em);
-}
-
-.my-form__agreement-text a {
-    color: #7AD4F8;
-}
-
-.my-form__agreement-text a:hover,
-.my-form__agreement-text a:focus,
-.my-form__agreement-text a:active {
-    color: #6cbbda;
 }
 
 @media (max-width: 1201px) {

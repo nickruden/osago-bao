@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="./styles/UI/button.css">
     <link rel="stylesheet" href="./styles/UI/input.css">
+    <link rel="stylesheet" href="./styles/UI/checkbox.css">
 
     <link rel="stylesheet" href="./styles/components/header.css">
     <link rel="stylesheet" href="./styles/components/footer.css">
@@ -85,9 +86,14 @@
                         <div class="my-form__input"><input type="text" class="my-input" placeholder="Город"></div>
                         <div class="my-form__input"><input type="email" class="my-input" placeholder="E-mail"></div>
                         <button class="my-button my-form__button">Отправить заявку</button>
-                        <p class="my-form__agreement-text">Подтверждаю согласие на обработку персональных данных в
-                            соответствии с <a href="">Политикой в области обработки и защиты персональных данных</a>
-                            и <a href="">Пользовательским соглашением</a></p>
+                        <label for="agreementCheck2" class="my-checkbox my-form__checkbox">
+                            <input type="checkbox" name="agreement-checkbox" id="agreementCheck2"
+                                class="my-checkbox__old">
+                            <span class="my-checkbox__new"></span>
+                            <span class="my-checkbox__text">Подтверждаю согласие на обработку персональных данных в
+                                соответствии с <a href="">Политикой в области обработки и защиты персональных данных</a>
+                                и <a href="">Пользовательским соглашением</a></span>
+                        </label>
                     </div>
                 </form>
             </div>
@@ -112,9 +118,15 @@
                             <div class="my-form__input"><input type="text" name="input-phone" class="my-input"
                                     placeholder="Номер телефона"></div>
                             <button class="my-button my-form__button">Отправить заявку</button>
-                            <p class="my-form__agreement-text">Подтверждаю согласие на обработку персональных данных в
-                                соответствии с <a href="">Политикой в области обработки и защиты персональных данных</a>
-                                и <a href="">Пользовательским соглашением</a></p>
+                            <label for="agreementCheck3" class="my-checkbox my-form__checkbox">
+                                <input type="checkbox" name="agreement-checkbox" id="agreementCheck3"
+                                    class="my-checkbox__old">
+                                <span class="my-checkbox__new"></span>
+                                <span class="my-checkbox__text">Подтверждаю согласие на обработку персональных данных в
+                                    соответствии с <a href="">Политикой в области обработки и защиты персональных
+                                        данных</a>
+                                    и <a href="">Пользовательским соглашением</a></span>
+                            </label>
                         </div>
                     </form>
                     <div class="hero-section__features">
@@ -798,9 +810,15 @@
                             <div class="my-form__input"><input type="text" class="my-input" placeholder="Город"></div>
                             <div class="my-form__input"><input type="email" class="my-input" placeholder="E-mail"></div>
                             <button class="my-button --buttonColor-light my-form__button">Отправить заявку</button>
-                            <p class="my-form__agreement-text">Подтверждаю согласие на обработку персональных данных в
-                                соответствии с <a href="">Политикой в области обработки и защиты персональных данных</a>
-                                и <a href="">Пользовательским соглашением</a></p>
+                            <label for="agreementCheck" class="my-checkbox my-form__checkbox">
+                                <input type="checkbox" name="agreement-checkbox" id="agreementCheck"
+                                    class="my-checkbox__old">
+                                <span class="my-checkbox__new"></span>
+                                <span class="my-checkbox__text">Подтверждаю согласие на обработку персональных данных в
+                                    соответствии с <a href="">Политикой в области обработки и защиты персональных
+                                        данных</a>
+                                    и <a href="">Пользовательским соглашением</a></span>
+                            </label>
                         </div>
                     </form>
                     <div class="lead-section__image-wrap">
@@ -810,103 +828,105 @@
                 </div>
             </div>
         </section>
+    </main>
 
-        <footer class="footer">
-            <div class="my-container footer__container">
-                <div class="footer__top">
-                    <div class="footer__top-left">
-                        <a href="./index.html" class="footer__logo-wrap">
-                            <img src="./assets/images/white-logo.svg" alt="логотип ОСАГО-ВАО" class="footer__logo-img">
-                        </a>
-                        <nav class="footer__menu">
-                            <ul class="footer__menu-items">
-                                <li class="footer__menu-item"><a href="" class="footer__menu-link">Автострахование</a>
-                                </li>
-                                <li class="footer__menu-item"><a href="" class="footer__menu-link">Страхование
-                                        недвижимости
-                                        и&nbsp;имущества</a></li>
-                                <li class="footer__menu-item"><a href="" class="footer__menu-link">Ипотечное
-                                        страхование</a>
-                                </li>
-                                <li class="footer__menu-item"><a href="" class="footer__menu-link">Имущество юридических
-                                        лиц</a></li>
-                                <li class="footer__menu-item"><a href="" class="footer__menu-link">Несчастный случай</a>
-                                </li>
-                                <li class="footer__menu-item"><a href="" class="footer__menu-link">Путешествия</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="footer__top-right">
-                        <div class="footer__contacts">
-                            <div class="footer__contact-info">
-                                <div class="footer__contact-title">Режим работы:</div>
-                                <div class="footer__contact-items">
-                                    <div class="footer__contact-item">
-                                        <div class="footer__work-time">
-                                            <span>ПН-ПТ</span><span>10:00-19:00</span>
-                                        </div>
-                                        <div class="footer__work-time">
-                                            <span>СБ-ВС</span><span>10:00-17:00</span>
-                                        </div>
+
+    <footer class="footer">
+        <div class="my-container footer__container">
+            <div class="footer__top">
+                <div class="footer__top-left">
+                    <a href="./index.html" class="footer__logo-wrap">
+                        <img src="./assets/images/white-logo.svg" alt="логотип ОСАГО-ВАО" class="footer__logo-img">
+                    </a>
+                    <nav class="footer__menu">
+                        <ul class="footer__menu-items">
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Автострахование</a>
+                            </li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Страхование
+                                    недвижимости
+                                    и&nbsp;имущества</a></li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Ипотечное
+                                    страхование</a>
+                            </li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Имущество юридических
+                                    лиц</a></li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Несчастный случай</a>
+                            </li>
+                            <li class="footer__menu-item"><a href="" class="footer__menu-link">Путешествия</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__top-right">
+                    <div class="footer__contacts">
+                        <div class="footer__contact-info">
+                            <div class="footer__contact-title">Режим работы:</div>
+                            <div class="footer__contact-items">
+                                <div class="footer__contact-item">
+                                    <div class="footer__work-time">
+                                        <span>ПН-ПТ</span><span>10:00-19:00</span>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="footer__contact-info">
-                                <div class="footer__contact-title">Звонки на номер:</div>
-                                <div class="footer__contact-items">
-                                    <div class="footer__contact-item">
-                                        <a href="tel:+79260494292" class="--linkColor-white footer__contact-phone">+7
-                                            (926)
-                                            049-42-92</a>
+                                    <div class="footer__work-time">
+                                        <span>СБ-ВС</span><span>10:00-17:00</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button class="my-button --buttonSize-small footer__button">Заявка</button>
+                        <div class="footer__contact-info">
+                            <div class="footer__contact-title">Звонки на номер:</div>
+                            <div class="footer__contact-items">
+                                <div class="footer__contact-item">
+                                    <a href="tel:+79260494292" class="--linkColor-white footer__contact-phone">+7
+                                        (926)
+                                        049-42-92</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="footer__bottom">
-                    <div class="footer__copyright-text">&copy; ОСАГО-ВАО, 2025</div>
+                    <button class="my-button --buttonSize-small footer__button">Заявка</button>
                 </div>
             </div>
-        </footer>
+            <div class="footer__bottom">
+                <div class="footer__copyright-text">&copy; ОСАГО-ВАО, 2025</div>
+            </div>
+        </div>
+    </footer>
 
 
-        <!-- БИБЛИОТЕКИ -->
-        <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
+    <!-- БИБЛИОТЕКИ -->
+    <script src="./assets/libs/swiper/swiper-bundle.min.js"></script>
 
 
-        <!-- ОБЩИЕ СКРИПТЫ -->
-        <script src="./assets/scripts/toggle.js"></script>
-        <script src="./assets/scripts/my-accordion.js"></script>
-        <script src="./assets/scripts/phone-mask.js"></script>
-        <script src="./assets/scripts/modal.js"></script>
+    <!-- ОБЩИЕ СКРИПТЫ -->
+    <script src="./assets/scripts/toggle.js"></script>
+    <script src="./assets/scripts/my-accordion.js"></script>
+    <script src="./assets/scripts/phone-mask.js"></script>
+    <script src="./assets/scripts/modal.js"></script>
 
 
-        <!-- слайдер отзывов -->
-        <script>
-            const swiper = new Swiper('.reviews__swiper', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                watchOverflow: true,
-                navigation: {
-                    nextEl: '.reviews__swiper-button-next',
-                    prevEl: '.reviews__swiper-button-prev',
+    <!-- слайдер отзывов -->
+    <script>
+        const swiper = new Swiper('.reviews__swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            watchOverflow: true,
+            navigation: {
+                nextEl: '.reviews__swiper-button-next',
+                prevEl: '.reviews__swiper-button-prev',
+            },
+            pagination: {
+                el: '.reviews__swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
                 },
-                pagination: {
-                    el: '.reviews__swiper-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 2,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                    }
+                1024: {
+                    slidesPerView: 3,
                 }
-            });
-        </script>
+            }
+        });
+    </script>
 </body>
 
 </html>

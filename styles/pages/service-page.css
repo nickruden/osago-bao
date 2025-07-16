@@ -954,14 +954,12 @@
 }
 
 /* Обрезка лишнего пространства сверху */
-.standart-text::before,
-.standart-text *:not(.bold-text)::before {
+.return-loss__pre-title::before {
     margin-top: calc((0.72 - 1.4) * 0.5em);
 }
 
 /* Обрезка снизу (если нужно) */
-.standart-text::after,
-.standart-text *:not(.bold-text)::after {
+.return-loss__pre-title::after {
     margin-bottom: calc((0.72 - 1.4) * 0.5em);
 }
 
@@ -1162,14 +1160,12 @@
     }
 
     /* Обрезка лишнего пространства сверху */
-    .standart-text::before,
-    .standart-text *:not(.bold-text)::before {
+    .return-loss__card-title::before {
         margin-top: calc((0.72 - 1.4) * 0.5em);
     }
 
     /* Обрезка снизу (если нужно) */
-    .standart-text::after,
-    .standart-text *:not(.bold-text)::after {
+    .return-loss__card-title::after {
         margin-bottom: calc((0.72 - 1.4) * 0.5em);
     }
 
