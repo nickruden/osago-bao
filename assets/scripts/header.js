@@ -27,12 +27,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const dropdownToggle = document.querySelector(".my-dropdown-toggle");
+  const dropdownToggle = document.querySelector(
+    ".mobile-menu__my-dropdown-toggle"
+  );
   if (dropdownToggle) {
     dropdownToggle.addEventListener("click", function () {
-      const list = this.nextElementSibling;
-      list.style.display =
-        list.style.display === "flex" ? "none" : "flex";
+      const dropdown = this.closest(".mobile-menu__my-dropdown");
+      const list = dropdown.querySelector(".mobile-menu__my-dropdown-list");
+
+      if (!dropdown.classList.contains("active")) {
+        list.style.display = "flex";
+
+        void list.offsetWidth;
+
+        list.style.opacity = "1";
+        list.style.transform = "translateX(0)";
+
+        dropdown.classList.add("active");
+      } else {
+        list.style.opacity = "0";
+        list.style.transform = "translateX(100px)";
+
+        setTimeout(() => {
+          list.style.display = "none";
+          dropdown.classList.remove("active");
+        }, 300);
+      }
     });
   }
 });

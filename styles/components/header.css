@@ -149,6 +149,7 @@
     font-weight: 700;
     line-height: 1.2;
     color: #065BBA;
+    transition: color 0.3s ease;
 }
 
 .mobile-menu__my-dropdown-list {
@@ -156,6 +157,17 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: none;
+}
+
+.mobile-menu__my-dropdown.active .mobile-menu__my-dropdown-list {
+    opacity: 1;
+    transform: translateX(0);
+    height: auto;
+    display: flex;
 }
 
 .mobile-menu__my-dropdown-list-item {
