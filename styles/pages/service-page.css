@@ -385,12 +385,10 @@
 /* Порядок действий при страховом случае */
 .order-actions {}
 
-.colored-block__wrapper {
+.order-actions__container {
     padding-top: 70px;
     padding-bottom: 72px;
 }
-
-.order-actions__container {}
 
 .order-actions__title {}
 
@@ -468,7 +466,7 @@
 }
 
 @media (max-width: 1025px) {
-    .colored-block__wrapper {
+    .order-actions__container {
         padding-top: 60px;
         padding-bottom: 62px;
     }
@@ -494,7 +492,7 @@
 }
 
 @media (max-width: 830px) {
-    .colored-block__wrapper {
+    .order-actions__container {
         padding-top: 50px;
         padding-bottom: 50px;
     }
@@ -527,7 +525,7 @@
 }
 
 @media (max-width: 581px) {
-    .colored-block__wrapper {
+    .order-actions__container {
         padding-top: 42px;
         padding-bottom: 42px;
     }
@@ -556,7 +554,7 @@
 }
 
 @media (max-width: 421px) {
-    .colored-block__wrapper {
+    .order-actions__container {
         padding-top: 34px;
         padding-bottom: 34px;
     }
@@ -706,5 +704,250 @@
     .download-docs__link-img {
         max-width: 36px;
         max-height: 60px;
+    }
+}
+
+
+/* Приобретённые полисы */
+
+.sold-services {}
+
+.sold-services__container {
+    padding-top: 62px;
+    padding-bottom: 65px;
+}
+
+.sold-services__title {
+    margin-bottom: 36px;
+}
+
+.sold-services__slider {}
+
+.sold-services__swiper {}
+
+.sold-services__swiper-wrapper {
+    align-items: stretch;
+    max-width: 1130px;
+}
+
+.sold-services-card {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 30px 26px 30.1px 30px;
+    height: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.sold-services-card__top-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sold-services-card__avatar-wrap {
+    max-width: 57px;
+    max-height: 57px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sold-services-card__avatar-img {}
+
+.sold-services-card__service-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sold-services-card__service-name {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #065BBA;
+    /* Сохраняем интервал между строками */
+    display: inline-block;
+    vertical-align: top;
+    /* Убираем зазор снизу */
+    position: relative;
+}
+
+/* Обрезка лишнего пространства сверху */
+.sold-services-card__service-name::before {
+    content: '';
+    display: block;
+    height: 0;
+    margin-top: calc((0.72 - 1.4) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.sold-services-card__service-name::after {
+    content: '';
+    display: block;
+    height: 0;
+    margin-bottom: calc((0.72 - 1.4) * 0.5em);
+}
+
+.sold-services-card__price {
+    color: #065BBA;
+}
+
+.sold-services-card__client {
+    font-weight: 700;
+}
+
+.sold-services-card__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.sold-services-card__address {}
+
+.sold-services-card__drive-period {}
+
+.sold-services__swiper-navigation {}
+
+.sold-services__swiper-button-prev {}
+
+.sold-services__swiper-button-next {}
+
+.sold-services__swiper-pagination {}
+
+@media (max-width: 1201px) {
+    .sold-services__title {
+        margin-bottom: 32px;
+    }
+
+    .sold-services-card {
+        padding: 25px 20px 30px 25px;
+    }
+
+    .sold-services-card__top-info {
+        gap: 18px;
+    }
+
+    .sold-services-card__avatar-wrap {
+        max-width: 55px;
+        max-height: 55px;
+    }
+
+    .sold-services-card__service-desc {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sold-services__container {
+        padding-top: 52px;
+        padding-bottom: 55px;
+    }
+
+    .sold-services-card {
+        gap: 25px;
+    }
+
+    .sold-services-card__top-info {
+        gap: 16px;
+    }
+
+    .sold-services-card__texts {
+        gap: 23px;
+    }
+}
+
+@media (max-width: 830px) {
+    .sold-services__container {
+        padding-top: 47px;
+        padding-bottom: 47px;
+    }
+
+    .sold-services__title {
+        margin-bottom: 28px;
+    }
+
+    .sold-services-card {
+        padding: 22px 19px 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sold-services-card {
+        padding: 25px 20px 30px 25px;
+        gap: 28px;
+    }
+
+    .sold-services-card__top-info {
+        gap: 18px;
+    }
+
+    .sold-services-card__service-desc {
+        gap: 14px;
+    }
+
+    .sold-services-card__texts {
+        gap: 28px;
+    }
+}
+
+@media (max-width: 581px) {
+    .sold-services__container {
+        padding-top: 41px;
+        padding-bottom: 41px;
+    }
+
+    .sold-services__title {
+        margin-bottom: 25px;
+    }
+
+    .sold-services-card {
+        gap: 24px;
+    }
+
+    .sold-services-card__top-info {
+        gap: 16px;
+    }
+
+    .sold-services-card__avatar-wrap {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .sold-services-card__service-desc {
+        gap: 14px;
+    }
+
+    .sold-services-card__texts {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 421px) {
+    .sold-services__container {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .sold-services__title {
+        margin-bottom: 20px;
+    }
+
+    .sold-services-card {
+        padding: 20px 18px 30px 16px;
+        gap: 20px;
+    }
+
+    .sold-services-card__top-info {
+        gap: 14px;
+    }
+
+    .sold-services-card__service-desc {
+        gap: 10px;
+    }
+
+    .sold-services-card__texts {
+        gap: 20px;
     }
 }

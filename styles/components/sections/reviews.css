@@ -8,8 +8,6 @@
 }
 
 .reviews__slider {
-    padding: 0px 35px;
-    position: relative;
 }
 
 .reviews__swiper {}
@@ -33,8 +31,8 @@
 
 .review-card__top-info {
     display: flex;
-    gap: 22px;
     align-items: center;
+    gap: 22px;
 }
 
 .review-card__avatar-wrap {

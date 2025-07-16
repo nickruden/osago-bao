@@ -320,6 +320,7 @@
 /* Элементы управления слайдером */
 [class$="__slider"] {
     padding: 0px 35px;
+    position: relative;
 }
 
 .swiper-button-prev,

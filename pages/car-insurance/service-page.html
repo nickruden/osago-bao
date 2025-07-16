@@ -281,12 +281,89 @@
                 </div>
             </div>
         </section>
-        
         <section class="sold-services section-padding colored-block">
             <div class="colored-block__wrapper">
                 <div class="my-container sold-services__container">
                     <h2 class="section-title sold-services__title">Приобретенные <br> полисы</h2>
-                    <div class="sold-services__slider"></div>
+                    <div class="sold-services__slider">
+                        <div class="swiper sold-services__swiper">
+                            <div class="swiper-wrapper sold-services__swiper-wrapper">
+                                <div class="swiper-slide sold-services-card">
+                                    <div class="sold-services-card__top-info">
+                                        <div class="sold-services-card__avatar-wrap">
+                                            <img src="../../assets/images/no-avatar-image.svg"
+                                                alt="no image" class="sold-services-card__avatar-img">
+                                        </div>
+                                        <div class="sold-services-card__service-desc">
+                                            <div class="sold-services-card__service-name">ОСАГО-ВАО</div>
+                                            <div class="pre-title-text sold-services-card__price">3 500 руб.</div>
+                                        </div>
+                                    </div>
+                                    <h3 class="standart-text sold-services-card__client">Hyundai Solaris, 2012, 123 л.с.</h3>
+                                    <div class="sold-services-card__texts">
+                                        <div class="standart-text sold-services-card__address">Город: Омская обл, Омский р-н, деревня Калачево</div>
+                                        <div class="standart-text sold-services-card__drive-period">Стаж водителя: 10 лет</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sold-services-card">
+                                    <div class="sold-services-card__top-info">
+                                        <div class="sold-services-card__avatar-wrap">
+                                            <img src="../../assets/images/no-avatar-image.svg"
+                                                alt="no image" class="sold-services-card__avatar-img">
+                                        </div>
+                                        <div class="sold-services-card__service-desc">
+                                            <div class="sold-services-card__service-name">ОСАГО-ВАО</div>
+                                            <div class="pre-title-text sold-services-card__price">3 500 руб.</div>
+                                        </div>
+                                    </div>
+                                    <h3 class="standart-text sold-services-card__client">Hyundai Solaris, 2012, 123 л.с.</h3>
+                                    <div class="sold-services-card__texts">
+                                        <div class="standart-text sold-services-card__address">Город: Омская обл, Омский р-н, деревня Калачево</div>
+                                        <div class="standart-text sold-services-card__drive-period">Стаж водителя: 10 лет</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sold-services-card">
+                                    <div class="sold-services-card__top-info">
+                                        <div class="sold-services-card__avatar-wrap">
+                                            <img src="../../assets/images/no-avatar-image.svg"
+                                                alt="no image" class="sold-services-card__avatar-img">
+                                        </div>
+                                        <div class="sold-services-card__service-desc">
+                                            <div class="sold-services-card__service-name">ОСАГО-ВАО</div>
+                                            <div class="pre-title-text sold-services-card__price">3 500 руб.</div>
+                                        </div>
+                                    </div>
+                                    <h3 class="standart-text sold-services-card__client">Hyundai Solaris, 2012, 123 л.с.</h3>
+                                    <div class="sold-services-card__texts">
+                                        <div class="standart-text sold-services-card__address">Город: Омская обл, Омский р-н, деревня Калачево</div>
+                                        <div class="standart-text sold-services-card__drive-period">Стаж водителя: 10 лет</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide sold-services-card">
+                                    <div class="sold-services-card__top-info">
+                                        <div class="sold-services-card__avatar-wrap">
+                                            <img src="../../assets/images/no-avatar-image.svg"
+                                                alt="no image" class="sold-services-card__avatar-img">
+                                        </div>
+                                        <div class="sold-services-card__service-desc">
+                                            <div class="sold-services-card__service-name">ОСАГО-ВАО</div>
+                                            <div class="pre-title-text sold-services-card__price">3 500 руб.</div>
+                                        </div>
+                                    </div>
+                                    <h3 class="standart-text sold-services-card__client">Hyundai Solaris, 2012, 123 л.с.</h3>
+                                    <div class="sold-services-card__texts">
+                                        <div class="standart-text sold-services-card__address">Город: Омская обл, Омский р-н, деревня Калачево</div>
+                                        <div class="standart-text sold-services-card__drive-period">Стаж водителя: 10 лет</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-navigation sold-services__swiper-navigation">
+                            <div class="swiper-button-prev sold-services__swiper-button-prev"></div>
+                            <div class="swiper-button-next sold-services__swiper-button-next"></div>
+                        </div>
+                        <div class="swiper-pagination sold-services__swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -584,6 +661,31 @@
         <script src="../../assets/scripts/phone-mask.js"></script>
         <script src="../../assets/scripts/modal.js"></script>
 
+
+        <!-- слайдер приобретённых полисов -->
+        <script>
+            const swiper = new Swiper('.sold-services__swiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                watchOverflow: true,
+                navigation: {
+                    nextEl: '.sold-services__swiper-button-next',
+                    prevEl: '.sold-services__swiper-button-prev',
+                },
+                pagination: {
+                    el: '.sold-services__swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    }
+                }
+            });
+        </script>
 </body>
 
 </html>
