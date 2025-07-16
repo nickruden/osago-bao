@@ -120,6 +120,33 @@
     margin-bottom: calc((0.72 - 1.4) * 0.5em);
 }
 
+.my-accordion__body ul {
+    line-height: 0.7;
+}
+
+.my-accordion__body ul li {
+    font-size: 16px;
+    line-height: 1.4;
+    vertical-align: top;
+    position: relative;
+    padding-left: 1.2em;
+    /* Добавляем отступ под маркер */
+}
+
+/* Пользовательский маркер */
+.my-accordion__body ul li::before {
+    content: '–';
+    /* Символ маркера */
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    /* Регулируем вертикальное положение */
+    font-size: 1em;
+    line-height: 1;
+    color: currentColor;
+    /* Наследуем цвет текста */
+}
+
 @media (max-width: 1201px) {
     .my-accordion__button {
         font-size: 24px;
@@ -136,6 +163,10 @@
     }
 
     .my-accordion__body p {
+        font-size: 15px;
+    }
+
+    .my-accordion__body ul li {
         font-size: 15px;
     }
 }
@@ -175,10 +206,13 @@
     .my-accordion__body p {
         font-size: 14px;
     }
+
+    .my-accordion__body ul li {
+        font-size: 14px;
+    }
 }
 
-@media (max-width: 769px) {
-}
+@media (max-width: 769px) {}
 
 @media (max-width: 581px) {
     .my-accordion__item {
@@ -229,6 +263,11 @@
     }
 
     .my-accordion__body p {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .my-accordion__body ul li {
         font-size: 13px;
         line-height: 1.3;
     }

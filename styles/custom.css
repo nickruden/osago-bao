@@ -376,3 +376,38 @@
         display: none;
     }
 }
+
+
+/* Блок с виджетом */
+.widget-block {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 30px;
+    padding-top: 80px;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.widget-block * {
+    min-width: 0px !important;
+}
+
+@media (max-width: 769px) {
+    .widget-block {
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 581px) {
+    .widget-block {
+        padding-top: 71px;
+    }
+}
+
+@media (max-width: 421px) {
+    .widget-block {
+        padding-top: 60px;
+    }
+}
