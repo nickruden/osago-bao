@@ -404,6 +404,18 @@
     display: flex;
     align-items: center;
     gap: 25px;
+    position: relative;
+}
+
+.order-actions__item-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 0px;
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    width: 100%;
+    z-index: 1;
+    left: 100px;
 }
 
 .order-actions__step-name {
@@ -418,6 +430,8 @@
     background: #065BBA;
     box-shadow: 0px 8px 20px rgba(144, 195, 243, 0.14);
     border-radius: 50%;
+    position: relative;
+    z-index: 5;
 }
 
 /* Обрезка лишнего пространства сверху */
@@ -433,6 +447,8 @@
 .order-actions__step-text {
     max-width: 232px;
     color: #FFF;
+    position: relative;
+    z-index: 5;
 }
 
 @media (max-width: 1201px) {
@@ -466,6 +482,10 @@
     .order-actions__item-step {
         flex: 0 0 calc(50% - 30px);
         gap: 20px;
+    }
+
+    .order-actions__item-step:not(:last-child)::after {
+        display: none;
     }
 
     .order-actions__step-text {
