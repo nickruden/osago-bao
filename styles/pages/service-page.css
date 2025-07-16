@@ -380,3 +380,124 @@
         padding: 10px 12px;
     }
 }
+
+
+/* Бланки для скачивания */
+.download-docs {
+}
+.download-docs__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+.download-docs__title {
+    max-width: 407px;
+}
+.download-docs__links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 683px;
+    width: 100%;
+}
+.download-docs__link {
+    padding: 32px 32px 31px;
+    background-color: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(144, 195, 243, 0.34);
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    border-radius: 6px; 
+}
+.download-docs__link-img {
+    max-width: 54px;
+    max-height: 73px;
+}
+.download-docs__link-text {
+    text-decoration: underline;
+    color: #065BBA;
+line-height: 1.1;
+}
+
+/* Обрезка лишнего пространства сверху */
+.pre-title-text::before {
+    margin-top: calc((0.72 - 1.1) * 0.5em);
+}
+
+/* Обрезка снизу (если нужно) */
+.pre-title-text::after {
+    margin-bottom: calc((0.72 - 1.1) * 0.5em);
+}
+
+.download-docs__link:hover {
+    box-shadow: 0px 4px 20px 0px rgba(121, 163, 202, 0.34);
+}
+.download-docs__link:hover .download-docs__link-text {
+    color: #064B98;
+}
+
+@media (max-width: 1201px) {
+.download-docs__link-img {
+    max-width: 50px;
+    max-height: 67px;
+}
+}
+
+@media (max-width: 1025px) {
+.download-docs__link {
+    padding: 28px;
+    gap: 26px;
+}
+}
+
+@media (max-width: 830px) {
+    .download-docs__links {
+    gap: 15px;
+}
+    .download-docs__link {
+        padding: 25px;
+        gap: 24px;
+}
+    .download-docs__link-img {
+        max-width: 45px;
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 769px) {
+            .download-docs__links {
+    gap: 12px;
+}
+.download-docs__container {
+    flex-direction: column;
+    gap: 0px;
+}
+}
+
+@media (max-width: 581px) {
+        .download-docs__links {
+    gap: 10px;
+}
+    .download-docs__link {
+        padding: 20px;
+        gap: 22px;
+}
+    .download-docs__link-img {
+        max-width: 40px;
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 421px) {
+            .download-docs__links {
+    gap: 8px;
+}
+    .download-docs__link {
+        padding: 18px;
+        gap: 22px;
+}
+    .download-docs__link-img {
+        max-width: 36px;
+        max-height: 60px;
+    }
+}
