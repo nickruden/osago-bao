@@ -707,8 +707,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-button-prev reviews__swiper-button-prev"></div>
-                        <div class="swiper-button-next reviews__swiper-button-prev"></div>
+                        <div class="swiper-navigation reviews__swiper-navigation">
+                            <div class="swiper-button-prev reviews__swiper-button-prev"></div>
+                            <div class="swiper-button-next reviews__swiper-button-next"></div>
+                        </div>
                         <div class="swiper-pagination reviews__swiper-pagination"></div>
                     </div>
                 </div>
@@ -874,10 +876,12 @@
         <script src="./assets/scripts/modal.js"></script>
 
 
+        <!-- слайдер отзывов -->
         <script>
             const swiper = new Swiper('.reviews__swiper', {
                 slidesPerView: 1,
                 spaceBetween: 20,
+                watchOverflow: true,
                 navigation: {
                     nextEl: '.reviews__swiper-button-next',
                     prevEl: '.reviews__swiper-button-prev',
@@ -896,8 +900,6 @@
                 }
             });
         </script>
-
-
 </body>
 
 </html>
