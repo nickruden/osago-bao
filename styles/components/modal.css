@@ -7,7 +7,7 @@
     z-index: 800;
     display: none;
     overflow-y: auto;
-    padding-top: calc(81px + 125px);
+    padding-top: calc(81px + 45px);
     padding-bottom: 45px;
 }
 
@@ -17,7 +17,6 @@
     justify-content: center;
     min-height: 100vh;
     background: rgba(9, 33, 59, 0.54);
-    padding-top: calc(81px + 45px);
 }
 
 @media (max-height: 700px) {
@@ -34,6 +33,7 @@
     background-color: #FFF;
     border-radius: 12px;
     padding: 47px 43px;
+    margin-top: 45px;
 }
 
 .my-modal__close {
