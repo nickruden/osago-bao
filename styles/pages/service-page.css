@@ -29,14 +29,19 @@
 }
 
 .hero-section__container {
-    padding-top: 101px;
+    padding-top: 20px;
     padding-bottom: 102px;
     position: relative;
     z-index: 20;
     margin-bottom: 42px;
 }
 
+.hero-section__category-title:first-child {
+    margin-top: 101px;
+}
+
 .hero-section__category-title {
+    margin-top: 70px;
     font-size: 23px;
     font-weight: 700;
     line-height: 1;
@@ -146,8 +151,8 @@
 }
 
 @media (max-width: 1201px) {
-    .hero-section__container {
-        padding-top: 96px;
+    .hero-section__category-title:first-child {
+        margin-top: 96px;
     }
 
     .hero-section__category-title {
@@ -186,9 +191,12 @@
     }
 
     .hero-section__container {
-        padding-top: 90px;
         padding-bottom: 90px;
         gap: 40px;
+    }
+
+    .hero-section__category-title:first-child {
+        margin-top: 90px;
     }
 
     .hero-section__category-title {
@@ -233,13 +241,17 @@
     }
 
     .hero-section__container {
-        padding-top: 85px;
         padding-bottom: 0px;
         margin-bottom: 0px;
     }
 
+    .hero-section__category-title:first-child {
+        margin-top: 85px;
+    }
+
     .hero-section__category-title {
         font-size: 14px;
+        margin-top: 55px;
         margin-bottom: 25px;
     }
 
@@ -275,8 +287,8 @@
         padding-top: 62px;
     }
 
-    .hero-section__container {
-        padding-top: 78px;
+    .hero-section__category-title:first-child {
+        margin-top: 78px;
     }
 
     .hero-section__bg-image {
@@ -298,16 +310,17 @@
 }
 
 @media (max-width: 581px) {
-    .hero-section__container {
-        padding-top: 71px;
-    }
-
     .hero-section__bg-image {
         max-height: 418px;
     }
 
+    .hero-section__category-title:first-child {
+        margin-top: 71px;
+    }
+
     .hero-section__category-title {
         font-size: 12px;
+        margin-top: 46px;
         margin-bottom: 18px;
         line-height: 1.3;
     }
@@ -350,14 +363,15 @@
     }
 
     .hero-section__bg-image {
-        max-height: 345px;
+        max-height: 360px;
     }
 
-    .hero-section__container {
-        padding-top: 67px;
+    .hero-section__category-title:first-child {
+        margin-top: 67px;
     }
 
     .hero-section__category-title {
+        margin-top: 40px;
         margin-bottom: 16px;
     }
 

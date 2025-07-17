@@ -30,7 +30,7 @@
 }
 
 .hero-section__container {
-    padding-top: 101px;
+    padding-top: 20px;
     padding-bottom: 70px;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,12 @@
     z-index: 20;
 }
 
+.hero-section__title:first-child {
+    margin-top: 81px;
+}
+
 .hero-section__title {
+    margin-top: 20px;
     font-family: 'Raleway';
     font-size: 66px;
     font-weight: 700;
@@ -123,9 +128,12 @@
 
 @media (max-width: 1201px) {
     .hero-section__container {
-        padding-top: 96px;
         padding-bottom: 65px;
         gap: 35px;
+    }
+
+    .hero-section__title:first-child {
+        margin-top: 76px;
     }
 
     .hero-section__title {
@@ -143,9 +151,12 @@
     }
 
     .hero-section__container {
-        padding-top: 90px;
         padding-bottom: 60px;
         gap: 40px;
+    }
+
+    .hero-section__title:first-child {
+        margin-top: 70px;
     }
 
     .hero-section__form .my-form__button {
@@ -184,9 +195,12 @@
     }
 
     .hero-section__container {
-        padding-top: 85px;
         padding-bottom: 55px;
         gap: 35px;
+    }
+
+    .hero-section__title:first-child {
+        margin-top: 65px;
     }
 
     .hero-section__title {
@@ -214,9 +228,12 @@
     }
 
     .hero-section__container {
-        padding-top: 78px;
         padding-bottom: 50px;
         gap: 35px;
+    }
+
+    .hero-section__title:first-child {
+        margin-top: 58px;
     }
 
     .hero-section__bg-image::before {
@@ -284,9 +301,12 @@
 
 @media (max-width: 581px) {
     .hero-section__container {
-        padding-top: 71px;
         padding-bottom: 45px;
         gap: 30px;
+    }
+
+    .hero-section__title:first-child {
+        margin-top: 51px;
     }
 
     .hero-section__title {
@@ -336,13 +356,17 @@
     }
 
     .hero-section__container {
-        padding-top: 67px;
         padding-bottom: 40px;
         gap: 26px;
     }
 
+    .hero-section__title:first-child {
+        margin-top: 47px;
+    }
+
     .hero-section__title {
         font-size: 31px;
+        margin-top: 14px;
     }
 
     .hero-section__pre-title {
